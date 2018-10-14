@@ -10,7 +10,7 @@ public class Conecta {
             String serverName = "localhost";
             String mydatabase = "kicc";
             String username = "root";
-            String password = "root";
+            String password = "";
             String driverName = "com.mysql.jdbc.Driver";
             Class.forName(driverName);
             String url = "jdbc:mysql://" + serverName + "/" + mydatabase + "?allowPublicKeyRetrieval=true&useSSL=false";
