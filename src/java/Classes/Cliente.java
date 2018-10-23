@@ -10,7 +10,7 @@ public class Cliente extends Utilitarios{
 
     private Date dataNascimento;
     private long cpf;
-    private int id_cliente,telefone, celular;
+    private int id_cliente, telefone, celular;
     private String login, email, senha, nome, sobrenome, endereco, cartao_credito, nivel_acesso;
     
     /**
