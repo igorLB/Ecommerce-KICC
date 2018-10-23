@@ -10,6 +10,12 @@ import java.sql.Date;
 
 public class Produto extends Utilitarios{
 
+    private Date dataValidade;
+    private float preco, preco_promocional, peso;
+    private int id_produto, id_categoria, quantidade, ativo;
+    private String nome, descricao, marca;
+    private InputStream imagem_1, imagem_2, imagem_3, imagem_4, imagem_5;
+    
     /**
      * @return the dataValidade
      */
@@ -232,14 +238,6 @@ public class Produto extends Utilitarios{
      */
     public void setImagem_5(InputStream imagem_5) {
         this.imagem_5 = imagem_5;
-    }
-
-    private Date dataValidade;
-    private float preco, preco_promocional, peso;
-    private int id_produto, id_categoria, quantidade, ativo;
-    private String nome, descricao, marca;
-    private InputStream imagem_1, imagem_2, imagem_3, imagem_4, imagem_5;
-    
-    
+    }   
     
 }
