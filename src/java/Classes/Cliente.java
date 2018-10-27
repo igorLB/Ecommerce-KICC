@@ -10,8 +10,8 @@ public class Cliente extends Utilitarios{
 
     private Date dataNascimento;
     private long cpf;
-    private int id_cliente, telefone, celular;
-    private String login, email, senha, nome, sobrenome, endereco, cartao_credito, nivel_acesso;
+    private int id_cliente, telefone, celular, nivel_acesso, ativo;
+    private String login, email, senha, nome, sobrenome, endereco, cartao_credito;
     
     /**
      * @return the dataNascimento
@@ -81,6 +81,34 @@ public class Cliente extends Utilitarios{
      */
     public void setCelular(int celular) {
         this.celular = celular;
+    }
+
+    /**
+     * @return the nivel_acesso
+     */
+    public int getNivel_acesso() {
+        return nivel_acesso;
+    }
+
+    /**
+     * @param nivel_acesso the nivel_acesso to set
+     */
+    public void setNivel_acesso(int nivel_acesso) {
+        this.nivel_acesso = nivel_acesso;
+    }
+
+    /**
+     * @return the ativo
+     */
+    public int getAtivo() {
+        return ativo;
+    }
+
+    /**
+     * @param ativo the ativo to set
+     */
+    public void setAtivo(int ativo) {
+        this.ativo = ativo;
     }
 
     /**
@@ -179,22 +207,8 @@ public class Cliente extends Utilitarios{
      */
     public void setCartao_credito(String cartao_credito) {
         this.cartao_credito = cartao_credito;
-    }
-
-    /**
-     * @return the nivel_acesso
-     */
-    public String getNivel_acesso() {
-        return nivel_acesso;
-    }
-
-    /**
-     * @param nivel_acesso the nivel_acesso to set
-     */
-    public void setNivel_acesso(String nivel_acesso) {
-        this.nivel_acesso = nivel_acesso;
-    } 
-   
+    }    
+ 
 }
 
 
