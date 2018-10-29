@@ -1,0 +1,53 @@
+    #btnvendas:hover,#btncontrole:hover,
+#btntrocas:hover,#btndados:hover,#btncompras:hover{color:white;}
+
+#btnvendas,#btncompras,#btncontrole,#btntrocas,#btndados{color:#000000;font-size:13px;}
+
+    .btnMenu{
+       /* border-top-right-radius:;*/
+       
+    }
+#btnlog{
+    border-radius:0px 5px 5px 0px;
+}
+#btndado{
+    border-radius:5px 0px 0px 5px;
+}
+  .button2 {
+    background-color: white; 
+    color: black; 
+    border: 1px solid #000000;
+    }
+    /*#008CBA*/
+    .button2:hover {
+    background-color: #000000;
+    color: white;
+    }
+     .button2{
+    width:175px;
+    padding: 0px 5px;
+    }
+
+a:hover{
+    color:white;
+}
+#btnlogout{
+    color:white;
+    font-size:13px;
+}
+#btnlogout:hover{
+    color:#000000;
+}
+#btnlog{
+    background:#000000;
+}
+#btnlog:hover{
+    
+background:white;
+}
+    @media (min-width: 320px) and (max-width: 480px) {
+        
+        .btndica{visibility: hidden; display:hidden;}
+        #exampleInputcft1{border-radius: 5px;}
+}
+ 
