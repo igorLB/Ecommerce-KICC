@@ -164,7 +164,7 @@ background:white;
         <div class="album py-5 bg-light">
             <div class="container">
                 <div class="pricing-header px-3 py-3 pt-md-5 pb-md-4 mx-auto text-center">
-                    <h1 class="display-4 text-dark">Anúncios em Destaque</h1>
+                    <h1 class="display-4 text-dark">AnÃºncios em Destaque</h1>
                 </div>
                 <div class="row">
                     <div class="col-md-4">

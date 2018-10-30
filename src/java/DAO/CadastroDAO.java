@@ -3,7 +3,7 @@ package DAO;
 import Classes.Cliente;
 import java.sql.*;
 
-public class ClienteDAO {
+public class CadastroDAO {
 
     public static Cliente cadastrar(Cliente user) {
         
@@ -11,8 +11,8 @@ public class ClienteDAO {
             // Conexão com banco de dados
             Connection con = Conecta.getConexao();
             
-            // Sintaxe para inserir os dados no banco, tem 14
-            String sql = "INSERT INTO usuario(dataNascimento, cpf, id_cliente, telefone, celular, login, email, senha, nome, sobrenome, endereco, cartao_credito, nivel_acesso, ativo) values(?,?,?,?,?,?,?,?,?,?,?,?,?,?)";
+            // Sintaxe para inserir os dados no banco, tem 13
+            String sql = "INSERT INTO usuario(dataNascimento, cpf, id_cliente, telefone, celular, login, email, senha, nome, sobrenome, endereco, cartao_credito, nivel_acesso) values(?,?,?,?,?,?,?,?,?,?,?,?,?)";
             
             PreparedStatement ps = con.prepareStatement(sql);
 
@@ -28,8 +28,7 @@ public class ClienteDAO {
             ps.setString(10, user.getSobrenome());
             ps.setString(11, user.getEndereco());
             ps.setString(12, user.getCartao_credito());
-            ps.setInt(13, user.getNivel_acesso());
-            ps.setInt(14, user.getAtivo());
+            ps.setString(13, user.getNivel_acesso());
             
             ps.execute();
             
