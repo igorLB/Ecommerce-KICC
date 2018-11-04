@@ -1,0 +1,71 @@
+
+
+#botao1,#botao2{
+	background: #090446;
+	color: #FEB95F
+}
+
+
+#container{
+margin-top: 2%;
+width: 50%;
+margin-left: 30%;    
+margin-bottom: 7%;
+
+}
+
+
+
+.titulo{
+color: #090446;
+padding: 3%;	
+margin-left: 14%;
+}
+
+#botao2{
+margin-top: 3%;
+margin-left: 5%;
+margin-bottom: 3%;
+width: 60%;
+
+
+
+} 
+
+#nav{
+background: #090446;
+}
+
+.navbar .navbar-nav li a{
+color: #FEB95F !important;
+font-weight: 400;
+padding-left: 50px !important;
+
+
+}
+.navbar .navbar-nav li a:hover{
+color: #FEB95F !important;
+font-weight: 400;
+padding-left: 50px !important;
+transform: scale(1);
+
+
+}
+.navbar-brand{
+color: #FEB95F !important;
+font-size: 24px;
+font-weight: 700;
+
+}
+
+#footer{
+background: #090446;
+
+}
+#corAmarelo{
+color:#FEB95F ;
+}
+
+#corBranca{
+color: white;
+}
