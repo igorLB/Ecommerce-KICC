@@ -1,0 +1,79 @@
+/*Copiar daqui */
+body{
+  background-image: url(./res/img/BG.png) !important;
+  font-family: "Segoe UI";
+  background-color: #C7C7C7;
+}
+hr{
+  width: 200px;
+}
+/* Navbar */
+.navbar .navbar-nav li a{
+  color: #95989A !important;
+  font-weight: 400;
+  padding-left: 50px !important;
+
+}
+.navbar .navbar-nav li a:hover{
+  color: #363457 !important;
+  font-weight: 400;
+  padding-left: 50px !important;
+  transform: scale(1);
+
+}
+
+.navbar-brand{
+  color: #363457 !important;
+  font-size: 24px;
+  font-weight: 700;
+}
+a:link,a:visited {
+	color: black;
+	margin-left: 
+}
+
+/*Até aqui em páginas que tenham nav*/
+
+
+.container {
+  background-color: #FFF;
+  border-radius: 10px;
+  margin-top: 5%;
+  position: relative;
+}
+
+.btnPrincipal{
+  background-color: #363457;
+  width: 150px;
+  color:#FFF;
+  margin-left: 30%;
+  box-shadow: 0px 3px 6px rgba(0, 0, 0, 0.15);
+
+}
+.btnSecundario{
+  background-color: #98A886;
+  color: #FFF;
+  box-shadow: 0px 3px 6px rgba(0, 0, 0, 0.15);
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

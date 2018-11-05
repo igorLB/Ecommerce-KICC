@@ -1,0 +1,66 @@
+
+
+            .conteudo{ 
+                margin-top: 5%;
+                height: 350px;
+                width: 450px;
+                margin-left: 30%; 
+                font: 'arial';
+            }
+
+            input{
+                margin:  20px;
+                font-weight: 800; 
+            }
+
+            #enviar{
+                background: #090446;
+                color: #FEB95F !important;
+                margin-top: 2%;
+                margin-left: 35%
+            }
+
+            nav{
+                background: #090446;
+            }
+            hr{
+                width: 200px;
+            }
+            .navbar .navbar-nav li a{
+                color: #FEB95F !important;
+                font-weight: 400;
+                padding-left: 50px !important;
+
+
+            }
+            .navbar .navbar-nav li a:hover{
+                color: #FEB95F !important;
+                font-weight: 400;
+                padding-left: 50px !important;
+                transform: scale(1);
+
+
+            }
+            .navbar-brand{
+                color: #FEB95F !important;
+                font-size: 24px;
+                font-weight: 700;
+
+            }
+            #footer{
+                background: #090446;
+
+            }
+            #corAmarelo{
+                color:#FEB95F ;
+            }
+
+            #corBranca{
+                color: white;
+            }
+            
+            #validaOk{
+                display: none;
+                color: #090446;
+                margin-left: 28%;
+            }
