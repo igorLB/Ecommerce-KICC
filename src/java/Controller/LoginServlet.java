@@ -14,9 +14,11 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.HttpSession;
-import model.Usuario;
-import modelDAO.Conecta;
-import modelDAO.LoginDAO;
+import Classes.Mensagem;
+import Classes.Cliente;
+import DAO.ClienteDAO;
+import DAO.Conecta;
+import DAO.LoginDAO;
 
 public class LoginServlet extends HttpServlet {
 
@@ -35,11 +37,11 @@ public class LoginServlet extends HttpServlet {
            
             String email = request.getParameter("email");
             String senha = request.getParameter("senha");
-            Usuario objUsuario = new Usuario();
+            Cliente objUsuario = new Cliente();
             
             objUsuario.setEmail(email);
             objUsuario.setSenha(senha);
-            List<Usuario>listausuario=new ArrayList<>();
+            List<Cliente>listausuario=new ArrayList<>();
             
             //Passando os valores para o getUsuario no loginDAO
             listausuario = LoginDAO.getUsuario(email, senha);

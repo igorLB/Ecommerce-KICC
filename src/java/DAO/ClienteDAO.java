@@ -4,6 +4,48 @@ import Classes.Cliente;
 import java.sql.*;
 
 public class ClienteDAO {
+    
+    public static Cliente getUsuario(String email) {
+
+        Cliente usuario = new Cliente();
+
+        try {
+            Connection con = Conecta.getConexao();
+            String sql = "SELECT * FROM usuario WHERE email=?";
+            PreparedStatement ps = con.prepareStatement(sql);
+            ps.setString(1, email);
+            ResultSet rs = ps.executeQuery();
+
+            if (rs.next()) {
+                usuario.setDataNascimento(rs.getDate("dataNascimento"));
+                usuario.setCpf(rs.getString("cpf"));
+                usuario.setId_cliente(rs.getInt("id_cliente"));
+                usuario.setTelefone(rs.getString("telefone"));
+                usuario.setCelular(rs.getString("celular"));
+                usuario.setLogin(rs.getString("login"));
+                usuario.setEmail(rs.getString("email"));
+                usuario.setSenha(rs.getString("senha"));
+                usuario.setNome(rs.getString("nome"));
+                usuario.setSobrenome(rs.getString("sobrenome"));
+                usuario.setEndereco(rs.getString("endereco"));
+                usuario.setCartao_credito(rs.getString("cartao_credito"));
+                usuario.setNivel_acesso(rs.getInt("nivel_acesso"));
+                usuario.setAtivo(rs.getInt("ativo"));
+
+            } else {
+                usuario = null;
+            }
+
+            rs.close();
+            ps.close();
+            con.close();
+
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+
+        return usuario;
+    }
 
     public static Cliente cadastrar(Cliente user) {
         
@@ -17,10 +59,10 @@ public class ClienteDAO {
             PreparedStatement ps = con.prepareStatement(sql);
 
             ps.setDate(1, user.getDataNascimento());
-            ps.setLong(2, user.getCpf());
+            ps.setString(2, user.getCpf());
             ps.setInt(3, user.getId_cliente());
-            ps.setInt(4, user.getTelefone());
-            ps.setInt(5, user.getCelular());
+            ps.setString(4, user.getTelefone());
+            ps.setString(5, user.getCelular());
             ps.setString(6, user.getLogin());
             ps.setString(7, user.getEmail());
             ps.setString(8, user.getSenha());

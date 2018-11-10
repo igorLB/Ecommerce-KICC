@@ -9,10 +9,9 @@ import java.sql.Date;
 public class Cliente extends Utilitarios{
 
     private Date dataNascimento;
-    private long cpf;
-    private int id_cliente, telefone, celular, nivel_acesso, ativo;
-    private String login, email, senha, nome, sobrenome, endereco, cartao_credito;
-    
+    private int id_cliente, nivel_acesso, ativo;
+    private String cpf, telefone, celular, login, email, senha, nome, sobrenome, endereco, cartao_credito;
+
     /**
      * @return the dataNascimento
      */
@@ -28,20 +27,6 @@ public class Cliente extends Utilitarios{
     }
 
     /**
-     * @return the cpf
-     */
-    public long getCpf() {
-        return cpf;
-    }
-
-    /**
-     * @param cpf the cpf to set
-     */
-    public void setCpf(long cpf) {
-        this.cpf = cpf;
-    }
-
-    /**
      * @return the id_cliente
      */
     public int getId_cliente() {
@@ -53,34 +38,6 @@ public class Cliente extends Utilitarios{
      */
     public void setId_cliente(int id_cliente) {
         this.id_cliente = id_cliente;
-    }
-
-    /**
-     * @return the telefone
-     */
-    public int getTelefone() {
-        return telefone;
-    }
-
-    /**
-     * @param telefone the telefone to set
-     */
-    public void setTelefone(int telefone) {
-        this.telefone = telefone;
-    }
-
-    /**
-     * @return the celular
-     */
-    public int getCelular() {
-        return celular;
-    }
-
-    /**
-     * @param celular the celular to set
-     */
-    public void setCelular(int celular) {
-        this.celular = celular;
     }
 
     /**
@@ -109,6 +66,48 @@ public class Cliente extends Utilitarios{
      */
     public void setAtivo(int ativo) {
         this.ativo = ativo;
+    }
+
+    /**
+     * @return the cpf
+     */
+    public String getCpf() {
+        return cpf;
+    }
+
+    /**
+     * @param cpf the cpf to set
+     */
+    public void setCpf(String cpf) {
+        this.cpf = cpf;
+    }
+
+    /**
+     * @return the telefone
+     */
+    public String getTelefone() {
+        return telefone;
+    }
+
+    /**
+     * @param telefone the telefone to set
+     */
+    public void setTelefone(String telefone) {
+        this.telefone = telefone;
+    }
+
+    /**
+     * @return the celular
+     */
+    public String getCelular() {
+        return celular;
+    }
+
+    /**
+     * @param celular the celular to set
+     */
+    public void setCelular(String celular) {
+        this.celular = celular;
     }
 
     /**
@@ -207,8 +206,9 @@ public class Cliente extends Utilitarios{
      */
     public void setCartao_credito(String cartao_credito) {
         this.cartao_credito = cartao_credito;
-    }    
- 
+    }
+    
+    
 }
 
 

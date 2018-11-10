@@ -1,0 +1,133 @@
+    body{
+            background-color:;
+        }
+     
+    .titulo-produto{ 
+    width:84%; 
+    font-size:20px;
+    -moz-box-shadow: 3px 4px 0px 0px #646566;
+	-webkit-box-shadow: 3px 4px 0px 0px #646566;
+	box-shadow: 3px 4px 0px 0px #646566;
+	background:-webkit-gradient(linear, left top, left bottom, color-stop(0.05, #bab6ba), color-stop(1, #9c9c9c));
+	background:-moz-linear-gradient(top, #bab6ba 5%, #9c9c9c 100%);
+	background:-webkit-linear-gradient(top, #bab6ba 5%, #9c9c9c 100%);
+	background:-o-linear-gradient(top, #bab6ba 5%, #9c9c9c 100%);
+	background:-ms-linear-gradient(top, #bab6ba 5%, #9c9c9c 100%);
+	background:linear-gradient(to bottom, #bab6ba 5%, #9c9c9c 100%);
+	filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#bab6ba', endColorstr='#9c9c9c',GradientType=0);
+	background-color:#bab6ba;
+	-moz-border-radius:5px;
+	-webkit-border-radius:5px;
+	border-radius:5px;
+	border:1px solid #858585;
+	display:inline-block;
+	color:#ffffff;
+	font-family:Arial;
+	font-weight:bold;
+	padding:0px 44px;
+	text-decoration:none;
+	text-shadow:0px 1px 0px #b8b8b8;
+}
+
+    .letra-cor{color:#FFFFFF;}
+    
+        #msg1 {
+            resize: none;
+            width: 100%;
+            outline:none;
+            
+        }
+.btn_Incio_grupo {
+            width: 300px;
+            margin-left:;
+        } 
+  .espaco{height:260px;}      
+ /*    
+    #Device = Most of the Smartphones Mobiles (Portrait)
+    #Screen = B/w 320px to 479px    
+*/
+@media (min-width: 320px) and (max-width: 480px) {
+    .btn_Incio_grupo {
+    width:360px;
+    margin-left:-15px;
+    border-radius:2px;
+        }
+    .espaco{height:50px;}
+    .imagem-produto{margin-left:-5px; }
+    #carregarimagem{ }
+    .titulo-produto{width:340px;}
+    .image-outras{width:340px;}]
+	#produtosimilares{ overflow-x: auto; width:800px; border:1px solid red; float:left;}
+	#img-4{float:left;}
+	#img-3{float:left;}
+	#img-2{float:left;}
+	#img-1{float:left;}
+	
+}
+/* 
+  ##Device = Low Resolution Tablets, Mobiles (Landscape)
+  ##Screen = B/w 481px to 767px
+*/
+@media (min-width: 481px) and (max-width: 767px) {
+     .btn_Incio_grupo {
+         width: 400px;
+    margin-left:80px;
+    border-radius:2px;
+        }
+        .espaco{height:50px;}
+        
+}
+ /* 
+  ##Device = Tablets, Ipads (portrait)
+  ##Screen = B/w 768px to 1024px
+*/  
+@media (min-width: 768px) and (max-width: 1024px) 
+    {
+        
+    .espaco{height:50px;}
+    
+    .btn_Incio_grupo {
+    width: 200px;
+    border-radius:2px;
+        }
+      #btn-jogo{ 
+         float:left;
+         margin-left:5px;
+        }
+      #btn-console{ 
+         float:right;
+         margin-right:240px;
+         margin-top:-48px;
+        }
+     #btn-acessorio{ 
+         float:right;
+         margin-left:;
+         margin-top:-48px;
+        }
+    }
+/* 
+  ##Device = Laptops, Desktops
+  ##Screen = B/w 1025px to 1280px
+*/
+@media (min-width: 1025px) and (max-width: 1280px) {
+       .btn_Incio_grupo {
+    width: 250px;
+    border-radius:2px;
+        }
+      #btn-jogo{ 
+         float:left;
+         margin-left:5px;
+        }
+      #btn-console{ 
+         float:right;
+         margin-right:340px;
+         margin-top:;
+        }
+     #btn-acessorio{ 
+         float:right;
+         margin-left:;
+         margin-top:-48px;
+        }
+}
+       
+        

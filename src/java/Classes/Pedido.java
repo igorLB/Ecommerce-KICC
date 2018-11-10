@@ -1,4 +1,4 @@
-package model;
+package Classes;
 
 import java.sql.Date;
 import java.util.ArrayList;
@@ -8,7 +8,7 @@ public class Pedido {
 
 
     private int id_pedido;
-    private Usuario usuario;
+    private Cliente usuario;
     private ArrayList<Item> itens;
     private String forma_pagamento,status_pagamento, cep, logradouro, numero, complemento, estado, cidade, bairro;
     private Date data_pedido;
@@ -43,14 +43,14 @@ public class Pedido {
     /**
      * @return the usuario
      */
-    public Usuario getUsuario() {
+    public Cliente getUsuario() {
         return usuario;
     }
 
     /**
      * @param id_usuario the id_usuario to set
      */
-    public void setUsuario(Usuario usuario) {
+    public void setUsuario(Cliente usuario) {
         this.usuario = usuario;
     }
 

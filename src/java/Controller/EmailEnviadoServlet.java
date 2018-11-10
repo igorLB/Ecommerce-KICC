@@ -7,8 +7,9 @@ import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
-import model.Usuario;
-import modelDAO.UsuarioDAO;
+import Classes.Mensagem;
+import Classes.Cliente;
+import DAO.ClienteDAO;
 
 /**
  *
@@ -28,8 +29,9 @@ public class EmailEnviadoServlet extends HttpServlet {
 
     protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 
+        /*
         String usuario = request.getSession().getAttribute("email").toString();
-        Usuario user = new UsuarioDAO().getUsuario("usuario");
+        Cliente user = new ClienteDAO().getUsuario("usuario");
             
         String nome = user.getNomeRazao();
         String email = user.getEmail();
@@ -37,7 +39,7 @@ public class EmailEnviadoServlet extends HttpServlet {
         String mensagem = "Olá "+nome+", seu pedido já foi enviado. Aguarde sem chorar...";
 
         //Chama o método que envia email
-        String resp = model.Email.enviaEmail(nome, email, assunto, mensagem);
+        String resp = Classes.Email.enviaEmail(nome, email, assunto, mensagem);
 
         //if(Mensagem.OK.equals(resp)){
             // Exibe a mensagem na tela, abaixo do botão
@@ -46,6 +48,7 @@ public class EmailEnviadoServlet extends HttpServlet {
         //    else{
         //        response.sendRedirect("TROCAR_PAGINA.jsp?msg=" + Mensagem.ERRO_CONEXAO);
         //}
+                */
     }
 
 }

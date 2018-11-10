@@ -12,8 +12,9 @@ import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
-import model.Usuario;
-import modelDAO.UsuarioDAO;
+import Classes.Mensagem;
+import Classes.Cliente;
+import DAO.ClienteDAO;
 
 /**
  *
@@ -35,27 +36,19 @@ public class ConsultaEmail extends HttpServlet {
             throws ServletException, IOException {
         response.setContentType("text/html;charset=UTF-8");
         try (PrintWriter out = response.getWriter()) {
-            /* TODO output your page here. You may use following sample code. */
-            /*out.println("<!DOCTYPE html>");
-            out.println("<html>");
-            out.println("<head>");
-            out.println("<title>Servlet ConsultaEmail</title>");            
-            out.println("</head>");
-            out.println("<body>");
-            out.println("<h1>Servlet ConsultaEmail at " + request.getContextPath() + "</h1>");*/
+            /*
             
             String email = request.getParameter("email");
             
             
-            Usuario usuario = UsuarioDAO.getUsuario(email);
+            Cliente usuario = ClienteDAO.getUsuario(email);
             
             if(usuario == null)
                 response.getWriter().write("Valido");
             else
                 response.getWriter().write("Ja existente");
             
-            /*out.println("</body>");
-            out.println("</html>");*/
+            */
         }
     }
 

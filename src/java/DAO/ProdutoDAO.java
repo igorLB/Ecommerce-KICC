@@ -1,12 +1,13 @@
-package modelDAO;
+package DAO;
 
 import java.io.InputStream;
-import model.Produto;
+import Classes.Produto;
 import java.sql.*;
 import java.util.ArrayList;
 
 public class ProdutoDAO {
     
+    /*
     public static Produto getProduto(int id) {
         
         Produto produto = new Produto();
@@ -564,6 +565,7 @@ public class ProdutoDAO {
         }
         return produtos;
     }
+    */
 }
     
     

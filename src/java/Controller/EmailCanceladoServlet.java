@@ -7,8 +7,9 @@ import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
-import model.Usuario;
-import modelDAO.UsuarioDAO;
+import Classes.Mensagem;
+import Classes.Cliente;
+import DAO.ClienteDAO;
 
 /**
  *
@@ -27,8 +28,9 @@ public class EmailCanceladoServlet extends HttpServlet {
 
     protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 
+        /*
         String usuario = request.getSession().getAttribute("email").toString();
-        Usuario user = new UsuarioDAO().getUsuario("usuario");
+        Cliente user = new ClienteDAO().getUsuario("usuario");
             
         String nome = user.getNomeRazao();
         String email = user.getEmail();
@@ -45,6 +47,7 @@ public class EmailCanceladoServlet extends HttpServlet {
         //    else{
         //        response.sendRedirect("TROCAR_PAGINA.jsp?msg=" + Mensagem.ERRO_CONEXAO);
         //}
+                */
     }
 
 }
