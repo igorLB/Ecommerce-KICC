@@ -1,4 +1,3 @@
-
 package controller;
 
 import java.io.IOException;
@@ -22,46 +21,43 @@ import DAO.LoginDAO;
 
 public class LoginServlet extends HttpServlet {
 
-    
     @Override
     protected void doGet(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
-       
+
     }
 
     @Override
     protected void doPost(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
-         PrintWriter out = response.getWriter();
+        PrintWriter out = response.getWriter();
         try {
-           
+
             String email = request.getParameter("email");
             String senha = request.getParameter("senha");
             Cliente objUsuario = new Cliente();
-            
+
             objUsuario.setEmail(email);
             objUsuario.setSenha(senha);
-            List<Cliente>listausuario=new ArrayList<>();
-            
+            List<Cliente> listausuario = new ArrayList<>();
+
             //Passando os valores para o getUsuario no loginDAO
             listausuario = LoginDAO.getUsuario(email, senha);
             //se não for vazio é porque logou
-            if(!(listausuario.isEmpty())){
+            if (!(listausuario.isEmpty())) {
                 HttpSession session = request.getSession();
-                 session.setAttribute("email", email);
-                 response.sendRedirect("index.jsp");
-            }
-            else{
+                session.setAttribute("email", email);
+                response.sendRedirect("index.jsp");
+            } else {
                 // response.sendRedirect("login.jsp");
-                 RequestDispatcher rd = request.getRequestDispatcher("login.jsp");
-                 rd.include(request, response);
-             } 
-      
-            
+                RequestDispatcher rd = request.getRequestDispatcher("login.jsp");
+                rd.include(request, response);
+            }
+
         } catch (Exception e) {
-           
+
             out.print("esse erro nunca existiu aqui");
         }
-    
+
     }
-    }
+}
