@@ -11,27 +11,25 @@ public class ClienteDAO {
 
         try {
             Connection con = Conecta.getConexao();
-            String sql = "SELECT * FROM usuario WHERE email=?";
+            String sql = "SELECT * FROM tb_cliente WHERE email=?";
             PreparedStatement ps = con.prepareStatement(sql);
             ps.setString(1, email);
             ResultSet rs = ps.executeQuery();
 
             if (rs.next()) {
-                usuario.setDataNascimento(rs.getDate("dataNascimento"));
-                usuario.setCpf(rs.getString("cpf"));
                 usuario.setId_cliente(rs.getInt("id_cliente"));
-                usuario.setTelefone(rs.getString("telefone"));
-                usuario.setCelular(rs.getString("celular"));
+                usuario.setCpf(rs.getString("cd_cpf"));
+                usuario.setNome(rs.getString("nm_cliente"));
+                usuario.setDataNascimento(rs.getDate("dt_nascimento"));
+                usuario.setNivel_acesso(rs.getInt("ds_nivel_de_acesso"));
                 usuario.setLogin(rs.getString("login"));
-                usuario.setEmail(rs.getString("email"));
                 usuario.setSenha(rs.getString("senha"));
-                usuario.setNome(rs.getString("nome"));
-                usuario.setSobrenome(rs.getString("sobrenome"));
-                usuario.setEndereco(rs.getString("endereco"));
-                usuario.setCartao_credito(rs.getString("cartao_credito"));
-                usuario.setNivel_acesso(rs.getInt("nivel_acesso"));
+                usuario.setEmail(rs.getString("email"));
+                usuario.setCelular(rs.getString("nm_celular"));
+                usuario.setTelefone(rs.getString("nm_telefone"));
+                usuario.setCartao_credito(rs.getString("cartao_de_credito"));
                 usuario.setAtivo(rs.getInt("ativo"));
-
+                usuario.setEndereco(rs.getString("id_endereco"));
             } else {
                 usuario = null;
             }
@@ -53,25 +51,23 @@ public class ClienteDAO {
             // Conexão com banco de dados
             Connection con = Conecta.getConexao();
             
-            // Sintaxe para inserir os dados no banco, tem 14
-            String sql = "INSERT INTO usuario(dataNascimento, cpf, id_cliente, telefone, celular, login, email, senha, nome, sobrenome, endereco, cartao_credito, nivel_acesso, ativo) values(?,?,?,?,?,?,?,?,?,?,?,?,?,?)";
+            // Sintaxe para inserir os dados no banco, tem 12
+            String sql = "INSERT INTO tb_cliente(cd_cpf, nm_cliente, dt_nascimento, ds_nivel_de_acesso, login, senha, email, nm_celular, nm_telefone, cartao_de_credito, ativo, id_endereco) values(?,?,?,?,?,?,?,?,?,?,?,?)";
             
             PreparedStatement ps = con.prepareStatement(sql);
 
-            ps.setDate(1, user.getDataNascimento());
-            ps.setString(2, user.getCpf());
-            ps.setInt(3, user.getId_cliente());
-            ps.setString(4, user.getTelefone());
-            ps.setString(5, user.getCelular());
-            ps.setString(6, user.getLogin());
+            ps.setString(1, user.getCpf());
+            ps.setString(2, user.getNome());
+            ps.setDate(3, user.getDataNascimento());
+            ps.setInt(4, user.getNivel_acesso());
+            ps.setString(5, user.getLogin());
+            ps.setString(6, user.getSenha());
             ps.setString(7, user.getEmail());
-            ps.setString(8, user.getSenha());
-            ps.setString(9, user.getNome());
-            ps.setString(10, user.getSobrenome());
-            ps.setString(11, user.getEndereco());
-            ps.setString(12, user.getCartao_credito());
-            ps.setInt(13, user.getNivel_acesso());
-            ps.setInt(14, user.getAtivo());
+            ps.setString(8, user.getCelular());
+            ps.setString(9, user.getTelefone());
+            ps.setString(10, user.getCartao_credito());
+            ps.setInt(11, user.getAtivo());
+            ps.setString(12, user.getEndereco());
             
             ps.execute();
             
