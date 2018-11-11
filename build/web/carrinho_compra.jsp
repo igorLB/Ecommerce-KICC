@@ -1,4 +1,4 @@
-<%page contentType="text/html" pageEncoding="UTF-8"%>
+<%@page contentType="text/html" pageEncoding="UTF-8"%>
 <jsp:include page="cabecalho.jsp" />
 	<h2>Carrinho de Produto</h2>
 		<table class="table">

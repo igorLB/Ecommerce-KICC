@@ -14,7 +14,7 @@
     <body>
 
         <p>Identifique-se</p>
-        <form method="post" action="LoginServlet">
+        <form method="POST" action="LoginServlet">
 
             <label>Email</label>
             <input type="text" name="email" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$"  required="required" placeholder="email@dominio.com"/>
@@ -22,7 +22,7 @@
             <label>Senha</label>
             <input type="password" name="senha" placeholder="*******"><br>
             <a href="senha.jsp">Esqueceu sua senha?</a><br>
-            <button type="submit" value="login" id="enviar">Enviar</button>
+            <button type="submit" name="entrar" id="entrar">Entrar</button>
         </form>
 
     </body>
