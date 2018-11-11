@@ -49,7 +49,7 @@
                         out.print("<a class='nav-link' href='carrinho_compra.jsp'>Carrinho<span class='sr-only'>(current)</span></a>");
                         out.print("</li>");
                         out.print("<li class='nav-item'>");
-                        out.print("<a class=nav-link href='SairServlet'>Sair</a>");
+                        out.print("<a class=nav-link href='./SairServlet'>Sair</a>");
                         out.print("</li>");
 
                     } else {
