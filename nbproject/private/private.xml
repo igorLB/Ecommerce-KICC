@@ -2,6 +2,20 @@
 <project-private xmlns="http://www.netbeans.org/ns/project-private/1">
     <editor-bookmarks xmlns="http://www.netbeans.org/ns/editor-bookmarks/2" lastBookmarkId="0"/>
     <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
+<<<<<<< HEAD
         <group/>
+=======
+        <group>
+            <file>file:/C:/Users/Elaine/Documents/ProjetoKicc/web/index.jsp</file>
+            <file>file:/C:/Users/Elaine/Documents/ProjetoKicc/src/java/DAO/LoginDAO.java</file>
+            <file>file:/C:/Users/Elaine/Documents/ProjetoKicc/web/contato.jsp</file>
+            <file>file:/C:/Users/Elaine/Documents/ProjetoKicc/src/java/DAO/Conecta.java</file>
+            <file>file:/C:/Users/Elaine/Documents/ProjetoKicc/src/java/Controller/SairServlet.java</file>
+            <file>file:/C:/Users/Elaine/Documents/ProjetoKicc/web/cabecalho.jsp</file>
+            <file>file:/C:/Users/Elaine/Documents/ProjetoKicc/web/login.jsp</file>
+            <file>file:/C:/Users/Elaine/Documents/ProjetoKicc/web/senha.jsp</file>
+            <file>file:/C:/Users/Elaine/Documents/ProjetoKicc/src/java/Controller/LoginServlet.java</file>
+        </group>
+>>>>>>> b9e69429204530802c8e1cdf230b4430a1cf3c31
     </open-files>
 </project-private>
