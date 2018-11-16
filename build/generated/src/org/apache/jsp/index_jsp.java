@@ -51,7 +51,7 @@ public final class index_jsp extends org.apache.jasper.runtime.HttpJspBase
       org.apache.jasper.runtime.JspRuntimeLibrary.include(request, response, "cabecalho.jsp", out, false);
       out.write("\r\n");
       out.write("<script type=\"text/javascript\">\r\n");
-      out.write("    var REST_URL = \"http://localhost:11233/ProjetoKiccWebService/webresources/clientes\";\r\n");
+      out.write("    var REST_URL = \"http://localhost:11233/ProjetoKiccWebService/webresources/produtos\";\r\n");
       out.write("    $(document).ready(function () {\r\n");
       out.write("        //$(\"#listar\").click(function() {\r\n");
       out.write("        $.ajax({\r\n");
@@ -63,11 +63,13 @@ public final class index_jsp extends org.apache.jasper.runtime.HttpJspBase
       out.write("\r\n");
       out.write("                    var resposta1 = data[i].nome;\r\n");
       out.write("                    var resposta2 = data[i].preco;\r\n");
+      out.write("                    var resposta3 = data[i].imagem;\r\n");
       out.write("\r\n");
       out.write("                }\r\n");
       out.write("\r\n");
       out.write("                $(\"#resposta1\").html(resposta1);\r\n");
       out.write("                $(\"#resposta2\").html(resposta2);\r\n");
+      out.write("                $(\"#resposta3\").html(resposta3);\r\n");
       out.write("            }\r\n");
       out.write("        });\r\n");
       out.write("        return (false);\r\n");
@@ -156,7 +158,7 @@ public final class index_jsp extends org.apache.jasper.runtime.HttpJspBase
       out.write("                        <div class=\"col-md-4\">\r\n");
       out.write("                            <div class=\"card mb-4 shadow-sm\">\r\n");
       out.write("                                <div class=\"zoom\">\r\n");
-      out.write("                                    <img class=\"card-img-top\" src=\"res/images/sem-foto.webp\" alt=\"Card image cap\">\r\n");
+      out.write("                                    <img class=\"card-img-top\" src=\"<div id='resposta2'></div>\" alt=\"Card image cap\">\r\n");
       out.write("                                </div>\r\n");
       out.write("                                <div class=\"card-body\">\r\n");
       out.write("                                    <p class=\"card-text\"><div id=\"resposta1\"></div></p>\r\n");
