@@ -3,6 +3,30 @@
 <%@page import="java.util.ArrayList"%>
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
 <jsp:include page="cabecalho.jsp" />
+<script type="text/javascript">
+    var REST_URL = "http://localhost:11233/ProjetoKiccWebService/webresources/clientes";
+    $(document).ready(function () {
+        //$("#listar").click(function() {
+        $.ajax({
+            type: "GET",
+            url: REST_URL,
+            success: function (data) {
+
+                for (i in data) {
+
+                    var resposta1 = data[i].nome;
+                    var resposta2 = data[i].preco;
+
+                }
+
+                $("#resposta1").html(resposta1);
+                $("#resposta2").html(resposta2);
+            }
+        });
+        return (false);
+        //});
+    });
+</script>
 <div class="container">
     <div class="col-sm-14 mr-auto ml-auto" align="" > 
         <nav class="navbar navbar-expand-lg navbar-light">
@@ -71,8 +95,8 @@
 
             <!-- Produtos -->
             <%
-          //ArrayList<Produto> listaPop = ProdutoDAO.getProdutosPopulares();
-%>
+                //ArrayList<Produto> listaPop = ProdutoDAO.getProdutosPopulares();
+            %>
 
             <div class="album py-5 bg-light">
                 <div class="container">
@@ -86,12 +110,12 @@
                                     <img class="card-img-top" src="res/images/sem-foto.webp" alt="Card image cap">
                                 </div>
                                 <div class="card-body">
-                                    <p class="card-text">Produto</p>
+                                    <p class="card-text"><div id="resposta1"></div></p>
                                     <div class="d-flex justify-content-between align-items-center">
                                         <div class="btn-group">
                                             <button type="button" class="btn btn-sm btn-outline-secondary">Compra</button>
                                         </div>
-                                        <small class="text-muted">R$ 30,00</small>
+                                        <small class="text-muted"><div id="resposta2"></div></small>
                                     </div>
                                 </div>
                             </div>

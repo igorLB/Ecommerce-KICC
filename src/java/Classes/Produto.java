@@ -1,6 +1,5 @@
 package Classes;
 
-import java.io.InputStream;
 import java.sql.Date;
 
 /**
@@ -13,8 +12,7 @@ public class Produto extends Utilitarios{
     private Date dataValidade;
     private float preco, preco_promocional, peso;
     private int id_produto, id_categoria, quantidade, ativo;
-    private String nome, descricao, marca;
-    private InputStream imagem_1, imagem_2, imagem_3, imagem_4, imagem_5;
+    private String nome, descricao, marca, imagem_1, imagem_2, imagem_3, imagem_4, imagem_5;
     
     /**
      * @return the dataValidade
@@ -173,71 +171,71 @@ public class Produto extends Utilitarios{
     /**
      * @return the imagem_1
      */
-    public InputStream getImagem_1() {
+    public String getImagem_1() {
         return imagem_1;
     }
 
     /**
      * @param imagem_1 the imagem_1 to set
      */
-    public void setImagem_1(InputStream imagem_1) {
+    public void setImagem_1(String imagem_1) {
         this.imagem_1 = imagem_1;
     }
 
     /**
      * @return the imagem_2
      */
-    public InputStream getImagem_2() {
+    public String getImagem_2() {
         return imagem_2;
     }
 
     /**
      * @param imagem_2 the imagem_2 to set
      */
-    public void setImagem_2(InputStream imagem_2) {
+    public void setImagem_2(String imagem_2) {
         this.imagem_2 = imagem_2;
     }
 
     /**
      * @return the imagem_3
      */
-    public InputStream getImagem_3() {
+    public String getImagem_3() {
         return imagem_3;
     }
 
     /**
      * @param imagem_3 the imagem_3 to set
      */
-    public void setImagem_3(InputStream imagem_3) {
+    public void setImagem_3(String imagem_3) {
         this.imagem_3 = imagem_3;
     }
 
     /**
      * @return the imagem_4
      */
-    public InputStream getImagem_4() {
+    public String getImagem_4() {
         return imagem_4;
     }
 
     /**
      * @param imagem_4 the imagem_4 to set
      */
-    public void setImagem_4(InputStream imagem_4) {
+    public void setImagem_4(String imagem_4) {
         this.imagem_4 = imagem_4;
     }
 
     /**
      * @return the imagem_5
      */
-    public InputStream getImagem_5() {
+    public String getImagem_5() {
         return imagem_5;
     }
 
     /**
      * @param imagem_5 the imagem_5 to set
      */
-    public void setImagem_5(InputStream imagem_5) {
+    public void setImagem_5(String imagem_5) {
         this.imagem_5 = imagem_5;
-    }   
-    
+    } 
+   
 }

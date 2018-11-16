@@ -7,6 +7,49 @@ import java.util.ArrayList;
 
 public class ProdutoDAO {
     
+    public static ArrayList<Produto> getProdutos() {
+        
+        ArrayList <Produto> produtos = new ArrayList();
+        
+        try {
+            Connection con = Conecta.getConexao();
+            String sql = "SELECT * FROM produto";
+            PreparedStatement ps = con.prepareStatement(sql);
+            ResultSet rs = ps.executeQuery();
+            
+            while(rs.next()){
+                Produto produto = new Produto();
+                produto.setDataValidade(rs.getDate("dataValidade"));
+                produto.setPreco(rs.getFloat("preco"));
+                produto.setPreco_promocional(rs.getFloat("preco_promocional"));
+                produto.setPeso(rs.getFloat("peso"));
+                produto.setId_produto(rs.getInt("id_produto"));
+                produto.setId_categoria(rs.getInt("id_categoria"));
+                produto.setQuantidade(rs.getInt("quantidade"));
+                produto.setAtivo(rs.getInt("ativo"));
+                produto.setNome(rs.getString("nome"));
+                produto.setDescricao(rs.getString("descricao"));
+                produto.setMarca(rs.getString("marca"));
+                produto.setImagem_1(rs.getString("imagem_1"));
+                produto.setImagem_2(rs.getString("imagem_2"));
+                produto.setImagem_3(rs.getString("imagem_3"));
+                produto.setImagem_4(rs.getString("imagem_4"));
+                produto.setImagem_5(rs.getString("imagem_5"));
+                
+                
+                produtos.add(produto);
+            }
+            
+            rs.close();
+            ps.close();
+            con.close();
+
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+        return produtos;
+    }
+    
     /*
     public static Produto getProduto(int id) {
         
