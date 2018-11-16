@@ -50,6 +50,30 @@ public final class index_jsp extends org.apache.jasper.runtime.HttpJspBase
       out.write("\r\n");
       org.apache.jasper.runtime.JspRuntimeLibrary.include(request, response, "cabecalho.jsp", out, false);
       out.write("\r\n");
+      out.write("<script type=\"text/javascript\">\r\n");
+      out.write("    var REST_URL = \"http://localhost:11233/ProjetoKiccWebService/webresources/clientes\";\r\n");
+      out.write("    $(document).ready(function () {\r\n");
+      out.write("        //$(\"#listar\").click(function() {\r\n");
+      out.write("        $.ajax({\r\n");
+      out.write("            type: \"GET\",\r\n");
+      out.write("            url: REST_URL,\r\n");
+      out.write("            success: function (data) {\r\n");
+      out.write("\r\n");
+      out.write("                for (i in data) {\r\n");
+      out.write("\r\n");
+      out.write("                    var resposta1 = data[i].nome;\r\n");
+      out.write("                    var resposta2 = data[i].preco;\r\n");
+      out.write("\r\n");
+      out.write("                }\r\n");
+      out.write("\r\n");
+      out.write("                $(\"#resposta1\").html(resposta1);\r\n");
+      out.write("                $(\"#resposta2\").html(resposta2);\r\n");
+      out.write("            }\r\n");
+      out.write("        });\r\n");
+      out.write("        return (false);\r\n");
+      out.write("        //});\r\n");
+      out.write("    });\r\n");
+      out.write("</script>\r\n");
       out.write("<div class=\"container\">\r\n");
       out.write("    <div class=\"col-sm-14 mr-auto ml-auto\" align=\"\" > \r\n");
       out.write("        <nav class=\"navbar navbar-expand-lg navbar-light\">\r\n");
@@ -119,8 +143,8 @@ public final class index_jsp extends org.apache.jasper.runtime.HttpJspBase
       out.write("            <!-- Produtos -->\r\n");
       out.write("            ");
 
-          //ArrayList<Produto> listaPop = ProdutoDAO.getProdutosPopulares();
-
+                //ArrayList<Produto> listaPop = ProdutoDAO.getProdutosPopulares();
+            
       out.write("\r\n");
       out.write("\r\n");
       out.write("            <div class=\"album py-5 bg-light\">\r\n");
@@ -135,12 +159,12 @@ public final class index_jsp extends org.apache.jasper.runtime.HttpJspBase
       out.write("                                    <img class=\"card-img-top\" src=\"res/images/sem-foto.webp\" alt=\"Card image cap\">\r\n");
       out.write("                                </div>\r\n");
       out.write("                                <div class=\"card-body\">\r\n");
-      out.write("                                    <p class=\"card-text\">Produto</p>\r\n");
+      out.write("                                    <p class=\"card-text\"><div id=\"resposta1\"></div></p>\r\n");
       out.write("                                    <div class=\"d-flex justify-content-between align-items-center\">\r\n");
       out.write("                                        <div class=\"btn-group\">\r\n");
       out.write("                                            <button type=\"button\" class=\"btn btn-sm btn-outline-secondary\">Compra</button>\r\n");
       out.write("                                        </div>\r\n");
-      out.write("                                        <small class=\"text-muted\">R$ 30,00</small>\r\n");
+      out.write("                                        <small class=\"text-muted\"><div id=\"resposta2\"></div></small>\r\n");
       out.write("                                    </div>\r\n");
       out.write("                                </div>\r\n");
       out.write("                            </div>\r\n");
