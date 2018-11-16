@@ -1,45 +1,82 @@
+<jsp:include page="cabecalho.jsp" />
+<script>
 
-<%@page contentType="text/html" pageEncoding="UTF-8"%>
-<!DOCTYPE html>
-<html>
-    <head>
-        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-        <title>Login</title>
-        <meta name="viewport" content="width=device-width, initial-scale=1">
-        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-        <script type="text/javascript">
-            var REST_URL = "http://localhost:11233/ProjetoKiccWebService/webresources/clientes";
-
-            $(document).ready(function() {
-
-                $("#entrar").click(function() {
-                    $.ajax({
-                    type: "GET",
-                        url: REST_URL + "/" + $("#email").val(),
-                        success: function(data) {
-                        $("#resposta").html(data);
-                        }
-                    });
+    $(document).ready(function () {
+        $("#submit1").hover(
+                function () {
+                    $(this).animate({"opacity": "0"}, "slow");
+                },
+                function () {
+                    $(this).animate({"opacity": "1"}, "slow");
                 });
-                return (false); 
-            });
-        </script>
+    });
 
-    </head>
-    <body>
+</script>	
 
-        <p>Identifique-se</p>
-        <form method="POST" id="login" name="login">
+<script type="text/javascript">
 
-            <label>Email</label>
-            <input type="text" id="email" name="email" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$"  required="required" placeholder="email@dominio.com"/>
-            <br>
-            <label>Senha</label>
-            <input type="password" id="senha" name="senha" placeholder="*******"><br>
-            <a href="senha.jsp">Esqueceu sua senha?</a><br>
-            <button type="submit" name="entrar" id="entrar">Entrar</button>
-        </form>
-<div id="resposta"></div>
-    </body>
+    var REST_URL = "http://localhost:11233/ProjetoKiccWebService/webresources/clientes";
 
-</html>
+    $("#submit").click(function () {
+        $.ajax({
+            type: "GET",
+            url: REST_URL + "/" + $("#email").val() + "/" + $("#senha").val(),
+            success: function (data) {
+
+                if (data === "200") {
+                    alert('ok');
+                } else {
+                    alert('erro');
+                    //window.location.href = "../recupSenha";
+                }
+                
+                //$("#resposta").html(data);
+            }
+        });
+        return (false);
+    });
+
+</script>
+</head>
+<body>
+    <div class="container">
+        <div id="wrapper">
+            <div id="wrappertop"></div>
+            <div id="wrappermiddle">
+                <h2>Login</h2>
+                <div id="username_input">
+                    <div id="username_inputleft"></div>
+                    <div id="username_inputmiddle">
+                        <form id="login">
+                            <input type="text" name="link" id="email" value="E-mail Address" onclick="this.value = ''">
+                            <img id="url_user" src="./images/mailicon.png" alt="">
+
+                            </div>
+                            <div id="username_inputright"></div>
+                    </div>
+                    <div id="password_input">
+                        <div id="password_inputleft"></div>
+                        <div id="password_inputmiddle">
+
+                            <input type="password" name="link" id="senha" value="Password" onclick="this.value = ''">
+                            <img id="url_password" src="./images/passicon.png" alt="">
+
+                        </div>
+                        <div id="password_inputright"></div>
+                    </div>
+                    <div id="submit">
+
+                        <input type="image" src="./res/images/submit_hover.png" id="submit1" value="Entrar">
+                        <input type="image" src="./res/images/submit.png" id="submit2" value="Entrar">
+                        </form>
+                    </div>
+                    <div id="links_left">
+                        <a href="#">Esqueceu a senha?</a>
+                    </div>
+                    <div id="links_right"><a href="#">Não é cadastrado ainda?</a></div>
+                </div>
+                <div id="wrapperbottom"></div>
+                <div id="powered">
+                </div>
+            </div>
+        </div>
