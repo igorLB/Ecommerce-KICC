@@ -4,9 +4,8 @@
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
 <jsp:include page="cabecalho.jsp" />
 <script type="text/javascript">
-    var REST_URL = "http://localhost:11233/ProjetoKiccWebService/webresources/clientes";
+    var REST_URL = "http://localhost:11233/ProjetoKiccWebService/webresources/produtos";
     $(document).ready(function () {
-        //$("#listar").click(function() {
         $.ajax({
             type: "GET",
             url: REST_URL,
@@ -16,15 +15,16 @@
 
                     var resposta1 = data[i].nome;
                     var resposta2 = data[i].preco;
+                    var resposta3 = data[i].imagem1;
 
                 }
 
                 $("#resposta1").html(resposta1);
                 $("#resposta2").html(resposta2);
+                $("#resposta3").html(resposta3);
             }
         });
         return (false);
-        //});
     });
 </script>
 <div class="container">
