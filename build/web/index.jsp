@@ -6,7 +6,6 @@
 <script type="text/javascript">
     var REST_URL = "http://localhost:11233/ProjetoKiccWebService/webresources/produtos";
     $(document).ready(function () {
-        //$("#listar").click(function() {
         $.ajax({
             type: "GET",
             url: REST_URL,
@@ -16,7 +15,7 @@
 
                     var resposta1 = data[i].nome;
                     var resposta2 = data[i].preco;
-                    var resposta3 = data[i].imagem;
+                    var resposta3 = data[i].imagem1;
 
                 }
 
@@ -26,7 +25,6 @@
             }
         });
         return (false);
-        //});
     });
 </script>
 <div class="container">
