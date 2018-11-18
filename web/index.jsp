@@ -6,26 +6,33 @@
 <script type="text/javascript">
     var REST_URL = "http://localhost:11233/ProjetoKiccWebService/webresources/produtos";
     $(document).ready(function () {
+        
         $.ajax({
             type: "GET",
             url: REST_URL,
+ 
             success: function (data) {
-
+                
                 for (i in data) {
 
-                    var resposta += data[i].nome;
-                    var resposta += data[i].preco;
-                    var resposta += data[i].imagem;
-
-
+                    var nome = data[i].nome;
+                    var preco = data[i].preco;
+                    var imagem1 = data[i].imagem1;
+                    var imagem2 = data[i].imagem2;
+                    var imagem3 = data[i].imagem3;
+                 
                 }
+                
+                $("#nome").html(nome);
+                $("#preco").html(preco);
+                $('#imagem1').append('<img src="'+imagem1+'">');
+                $('#imagem2').append('<img src="'+imagem2+'">');
+                $('#imagem3').append('<img src="'+imagem3+'">');
 
-                $("#resposta1").html(resposta.is(nome));
-                $("#resposta2").html(resposta);
-                $("#resposta3").html(resposta);
             }
         });
         return (false);
+
     });
 </script>
 <div class="container">
@@ -101,15 +108,16 @@
                         <div class="col-md-4">
                             <div class="card mb-4 shadow-sm">
                                 <div class="zoom">
-                                    <img class="card-img-top" src="res/images/sem-foto.webp" alt="Card image cap">
+                                    <!-- <img class="card-img-top" src="res/images/sem-foto.webp" alt="Popular 01"> -->
+                                    <div id="imagem1" class="card mb-4 shadow-sm"></div>
                                 </div>
                                 <div class="card-body">
-                                    <p class="card-text"><div id="resposta"></div></p>
+                                    <p class="card-text"><div id="nome"></div></p>
                                     <div class="d-flex justify-content-between align-items-center">
                                         <div class="btn-group">
                                             <button type="button" class="btn btn-sm btn-outline-secondary">Compra</button>
                                         </div>
-                                        <small class="text-muted"><div id="resposta"></div></small>
+                                        <small class="text-muted"><div id="preco"></div></small>
                                     </div>
                                 </div>
                             </div>
@@ -117,15 +125,16 @@
 						<div class="col-md-4">
                             <div class="card mb-4 shadow-sm">
                                 <div class="zoom">
-                                    <img class="card-img-top" src="res/images/sem-foto.webp" alt="Card image cap">
+                                    <!-- <img class="card-img-top" src="res/images/sem-foto.webp" alt="Popular 02"> -->
+                                    <div id="imagem2" class="card mb-4 shadow-sm"></div>
                                 </div>
                                 <div class="card-body">
-                                    <p class="card-text"><div id="resposta1"></div></p>
+                                    <p class="card-text"><div id="nome"></div></p>
                                     <div class="d-flex justify-content-between align-items-center">
                                         <div class="btn-group">
                                             <button type="button" class="btn btn-sm btn-outline-secondary">Compra</button>
                                         </div>
-                                        <small class="text-muted"><div id="resposta2"></div></small>
+                                        <small class="text-muted"><div id="preco"></div></small>
                                     </div>
                                 </div>
                             </div>
@@ -133,15 +142,16 @@
 						<div class="col-md-4">
                             <div class="card mb-4 shadow-sm">
                                 <div class="zoom">
-                                    <img class="card-img-top" src="res/images/sem-foto.webp" alt="Card image cap">
+                                    <!-- <img class="card-img-top" src="res/images/sem-foto.webp" alt="Popular 03"> -->
+                                    <div id="imagem3" class="card mb-4 shadow-sm"></div>
                                 </div>
                                 <div class="card-body">
-                                    <p class="card-text"><div id="resposta1"></div></p>
+                                    <p class="card-text"><div id="nome"></div></p>
                                     <div class="d-flex justify-content-between align-items-center">
                                         <div class="btn-group">
                                             <button type="button" class="btn btn-sm btn-outline-secondary">Compra</button>
                                         </div>
-                                        <small class="text-muted"><div id="resposta2"></div></small>
+                                        <small class="text-muted"><div id="preco"></div></small>
                                     </div>
                                 </div>
                             </div>

@@ -17,7 +17,7 @@
 
     var REST_URL = "http://localhost:11233/ProjetoKiccWebService/webresources/clientes";
 
-    $("#submit").click(function () {
+    $("#logar").click(function () {
         $.ajax({
             type: "GET",
             url: REST_URL + "/" + $("#email").val() + "/" + $("#senha").val(),
@@ -29,7 +29,7 @@
                     alert('erro');
                     //window.location.href = "../recupSenha";
                 }
-                
+
                 //$("#resposta").html(data);
             }
         });
@@ -47,8 +47,8 @@
                 <div id="username_input">
                     <div id="username_inputleft"></div>
                     <div id="username_inputmiddle">
-                        <form id="login">
-                            <input type="text" name="link" id="email" value="E-mail Address" onclick="this.value = ''">
+                        <form id="login" name="login">
+                            <input type="text" name="email" id="email" value="E-mail Address" onclick="this.value = ''">
                             <img id="url_user" src="./images/mailicon.png" alt="">
 
                             </div>
@@ -58,17 +58,20 @@
                         <div id="password_inputleft"></div>
                         <div id="password_inputmiddle">
 
-                            <input type="password" name="link" id="senha" value="Password" onclick="this.value = ''">
+                            <input type="password" name="senha" id="senha" value="Password" onclick="this.value = ''">
                             <img id="url_password" src="./images/passicon.png" alt="">
 
                         </div>
                         <div id="password_inputright"></div>
                     </div>
                     <div id="submit">
+                        <input type="submit" id="logar" name="logar" value="Entrar">
 
                         <input type="image" src="./res/images/submit_hover.png" id="submit1" value="Entrar">
                         <input type="image" src="./res/images/submit.png" id="submit2" value="Entrar">
-                        </form>
+                        
+                                                </form>
+
                     </div>
                     <div id="links_left">
                         <a href="#">Esqueceu a senha?</a>
