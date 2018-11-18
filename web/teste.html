@@ -1,40 +1,69 @@
-<%@page import="DAO.ProdutoDAO"%>
-<%@page import="Classes.Produto"%>
-<%@page import="java.util.ArrayList"%>
-<%@page contentType="text/html" pageEncoding="UTF-8"%>
-<jsp:include page="cabecalho.jsp" />
-<script type="text/javascript">
-    var REST_URL = "http://localhost:11233/ProjetoKiccWebService/webresources/produtos";
-    $(document).ready(function () {
-        
-        $.ajax({
-            type: "GET",
-            url: REST_URL,
- 
-            success: function (data) {
-                
-                for (i in data) {
+<!DOCTYPE html>
+<html lang="">
+    <head>
+        <meta charset="utf-8">
+        <noscript><meta http-equiv="refresh" content="1; url=http://changegames.ga/htaccess/errojavascript.html"></noscript>
+        <link rel="icon" href="corpo/logo3.png" type="image/png" sizes="16x16">
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+        <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" type="text/css" href="res/css/index.css">
+        <link rel="stylesheet" type="text/css" href="res/css/pagina_produto.css">
+    </head>
+    <title>KICC</title>
+</head>
+<body>
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <a class="navbar-brand" href="#">
+            <img src="res/bootstrap-solid.svg" width="30" height="30" class="d-inline-block align-top" alt="">
+            KICC
+        </a>
+        <div class="col-sm-3"></div>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <form class="form-inline my-2 my-lg-0" >
+                <input class="form-control mr-sm-2" size="50" type="search" placeholder="Pesquisar" aria-label="Search">
+                <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Buscar</button>
+            </form>
+            <div class="col-sm-3"></div>
+            <ul class="navbar-nav mr-auto" >
+                <%
+                    response.setContentType("text/html;charset=UTF-8");
 
-                    var nome = data[i].nome;
-                    var preco = data[i].preco;
-                    var imagem1 = data[i].imagem1;
-                    var imagem2 = data[i].imagem2;
-                    var imagem3 = data[i].imagem3;
-                 
-                }
-                
-                $("#nome").html(nome);
-                $("#preco").html(preco);
-                $('#imagem1').append('<img src="'+imagem1+'">');
-                $('#imagem2').append('<img src="'+imagem2+'">');
-                $('#imagem3').append('<img src="'+imagem3+'">');
+                    if (session.getAttribute("email") != null) {
 
-            }
-        });
-        return (false);
+                        String email = request.getSession().getAttribute("email").toString();
 
-    });
-</script>
+                        Cliente user = new ClienteDAO().getUsuario(email);
+
+                        out.print("<li class='nav-item active'>");
+                        out.print("<a class='nav-link' href='minha_conta.jsp'>Minha Conta<span class='sr-only'>(current)</span></a>");
+                        out.print("</li>");
+                        out.print("<li class='nav-item'>");
+                        out.print("<a class='nav-link' href='carrinho_compra.jsp'>Carrinho<span class='sr-only'>(current)</span></a>");
+                        out.print("</li>");
+                        out.print("<li class='nav-item'>");
+                        out.print("<a class=nav-link href='./SairServlet'>Sair</a>");
+                        out.print("</li>");
+
+                    } else {
+                        out.print("<li class='nav-item'>");
+                        out.print("<a class='nav-link' href='carrinho_compra.jsp'>Carrinho<span class='sr-only'>(current)</span></a>");
+                        out.print("</li>");
+                        out.print("<li class='nav-item'>");
+                        out.print("<a class=nav-link href=login.jsp>Login</a>");
+                        out.print("</li>");
+                    }
+                %>   
+
+            </ul>
+        </div>
+    </nav>
 <div class="container">
     <div class="col-sm-14 mr-auto ml-auto" align="" > 
         <nav class="navbar navbar-expand-lg navbar-light">
@@ -108,16 +137,15 @@
                         <div class="col-md-4">
                             <div class="card mb-4 shadow-sm">
                                 <div class="zoom">
-                                    <!-- <img class="card-img-top" src="res/images/sem-foto.webp" alt="Popular 01"> -->
-                                    <div id="imagem1" class="card mb-4 shadow-sm"></div>
+                                    <img class="card-img-top" src="res/images/sem-foto.webp" alt="Card image cap">
                                 </div>
                                 <div class="card-body">
-                                    <p class="card-text"><div id="nome"></div></p>
+                                    <p class="card-text"><div id="resposta1"></div></p>
                                     <div class="d-flex justify-content-between align-items-center">
                                         <div class="btn-group">
                                             <button type="button" class="btn btn-sm btn-outline-secondary">Compra</button>
                                         </div>
-                                        <small class="text-muted"><div id="preco"></div></small>
+                                        <small class="text-muted"><div id="resposta2"></div></small>
                                     </div>
                                 </div>
                             </div>
@@ -125,16 +153,15 @@
 						<div class="col-md-4">
                             <div class="card mb-4 shadow-sm">
                                 <div class="zoom">
-                                    <!-- <img class="card-img-top" src="res/images/sem-foto.webp" alt="Popular 02"> -->
-                                    <div id="imagem2" class="card mb-4 shadow-sm"></div>
+                                    <img class="card-img-top" src="res/images/sem-foto.webp" alt="Card image cap">
                                 </div>
                                 <div class="card-body">
-                                    <p class="card-text"><div id="nome"></div></p>
+                                    <p class="card-text"><div id="resposta1"></div></p>
                                     <div class="d-flex justify-content-between align-items-center">
                                         <div class="btn-group">
                                             <button type="button" class="btn btn-sm btn-outline-secondary">Compra</button>
                                         </div>
-                                        <small class="text-muted"><div id="preco"></div></small>
+                                        <small class="text-muted"><div id="resposta2"></div></small>
                                     </div>
                                 </div>
                             </div>
@@ -142,16 +169,15 @@
 						<div class="col-md-4">
                             <div class="card mb-4 shadow-sm">
                                 <div class="zoom">
-                                    <!-- <img class="card-img-top" src="res/images/sem-foto.webp" alt="Popular 03"> -->
-                                    <div id="imagem3" class="card mb-4 shadow-sm"></div>
+                                    <img class="card-img-top" src="res/images/sem-foto.webp" alt="Card image cap">
                                 </div>
                                 <div class="card-body">
-                                    <p class="card-text"><div id="nome"></div></p>
+                                    <p class="card-text"><div id="resposta1"></div></p>
                                     <div class="d-flex justify-content-between align-items-center">
                                         <div class="btn-group">
                                             <button type="button" class="btn btn-sm btn-outline-secondary">Compra</button>
                                         </div>
-                                        <small class="text-muted"><div id="preco"></div></small>
+                                        <small class="text-muted"><div id="resposta2"></div></small>
                                     </div>
                                 </div>
                             </div>
