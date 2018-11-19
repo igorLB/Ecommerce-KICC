@@ -46,3 +46,5 @@
                 </div>
             </div>
         </div>
+
+<script src="res/js/scripts.js"></script>

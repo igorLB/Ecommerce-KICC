@@ -14,7 +14,8 @@
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <link rel="stylesheet" type="text/css" href="res/css/index.css">
         <link rel="stylesheet" type="text/css" href="res/css/pagina_produto.css">
-		<link type="text/css" rel="stylesheet" href="res/css/style.css" media="screen" />
+        <link rel="stylesheet" type="text/css" href="res/css/produto.css">
+        <link type="text/css" rel="stylesheet" href="res/css/style.css" media="screen" />
     </head>
     <title>KICC</title>
 </head>
