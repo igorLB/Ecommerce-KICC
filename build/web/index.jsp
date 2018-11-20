@@ -68,131 +68,132 @@
         <div class="container">
             <h1 class="jumbotron-heading">KICC</h1>
             <p class="lead text-muted">Departamento de Alimentos e Bebidas com as melhores Ofertas e Promoções nas loja KICC.com. Compra segura, preço baixo e entrega rápida!</p>
-            <hr>
-            </section>
-            <div class="album py-5 bg-light">
-                <div class="container">
-                    <div class="pricing-header px-3 py-3 pt-md-5 pb-md-4 mx-auto text-center">
-                        <h1 class="display-4 text-dark">Produtos Populares</h1>
-                        <div class="row" id="product-list">
+        <hr>
+    </section>
+    
+    <!-- BOX PRODUTOS POPULARES -->
+    <div class="album py-5 bg-light">
+        <div class="container">
+            <div class="pricing-header px-3 py-3 pt-md-5 pb-md-4 mx-auto text-center">
+                <h1 class="display-4 text-dark">Produtos Populares</h1>
+                <div class="row" id="product-list">
 
-                            <!-- PRODUTOS VAO SER LISTADOS AQUI VIA JQUERY -->
-                            
-                        </div>
-                    </div>	
+                    <!-- PRODUTOS VAO SER LISTADOS AQUI VIA JQUERY -->
+
                 </div>
+            </div>	
+        </div>
+    </div>
+            
+    <!-- BOX PRODUTOS EM DESTAQUE -->
+    <div class="album py-5 bg-light">
+        <div class="container">
+            <div class="pricing-header px-3 py-3 pt-md-5 pb-md-4 mx-auto text-center">
+                <h1 class="display-4 text-dark">Anúncios em Destaque</h1>
             </div>
-            <!-- Produtos -->
-            <%
-                //ArrayList<Produto> listaPop = ProdutoDAO.getProdutosPopulares();
-%>
 
-            <div class="album py-5 bg-light">
-                <div class="container">
-                    <div class="pricing-header px-3 py-3 pt-md-5 pb-md-4 mx-auto text-center">
-                        <h1 class="display-4 text-dark">Anúncios em Destaque</h1>
+            <div class="row">
+                <div class="col-md-4">
+                    <div class="card mb-4 shadow-sm">
+                        <div class="zoom">
+                            <img class="card-img-top" src="res/images/sem-foto.webp" alt="Card image cap">
+                        </div>
+                        <div class="card-body">
+                            <p class="card-text"><div id="resposta1"></div></p>
+                            <div class="d-flex justify-content-between align-items-center">
+                                <div class="btn-group">
+                                    <button type="button" class="btn btn-sm btn-outline-secondary">Compra</button>
+                                </div>
+                                <small class="text-muted"><div id="resposta2"></div></small>
+                            </div>
+                        </div>
                     </div>
-                    <div class="row">
-                        <div class="col-md-4">
-                            <div class="card mb-4 shadow-sm">
-                                <div class="zoom">
-                                    <img class="card-img-top" src="res/images/sem-foto.webp" alt="Card image cap">
+                </div>
+                <div class="col-md-4">
+                    <div class="card mb-4 shadow-sm">
+                        <div class="zoom">
+                            <img class="card-img-top" src="res/images/sem-foto.webp" alt="Card image cap">
+                        </div>
+                        <div class="card-body">
+                            <p class="card-text">Produto</p>
+                            <div class="d-flex justify-content-between align-items-center">
+                                <div class="btn-group">
+                                    <button type="button" class="btn btn-sm btn-outline-secondary">Compra</button>
                                 </div>
-                                <div class="card-body">
-                                    <p class="card-text"><div id="resposta1"></div></p>
-                                    <div class="d-flex justify-content-between align-items-center">
-                                        <div class="btn-group">
-                                            <button type="button" class="btn btn-sm btn-outline-secondary">Compra</button>
-                                        </div>
-                                        <small class="text-muted"><div id="resposta2"></div></small>
-                                    </div>
-                                </div>
+                                <small class="text-muted">R$ 5,00</small>
                             </div>
                         </div>
-                        <div class="col-md-4">
-                            <div class="card mb-4 shadow-sm">
-                                <div class="zoom">
-                                    <img class="card-img-top" src="res/images/sem-foto.webp" alt="Card image cap">
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="card mb-4 shadow-sm">
+                        <div class="zoom">
+                            <img class="card-img-top" src="res/images/sem-foto.webp" alt="Card image cap">
+                        </div>
+                        <div class="card-body">
+                            <p class="card-text">Produto</p>
+                            <div class="d-flex justify-content-between align-items-center">
+                                <div class="btn-group">
+                                    <button type="button" class="btn btn-sm btn-outline-secondary">Compra</button>
                                 </div>
-                                <div class="card-body">
-                                    <p class="card-text">Produto</p>
-                                    <div class="d-flex justify-content-between align-items-center">
-                                        <div class="btn-group">
-                                            <button type="button" class="btn btn-sm btn-outline-secondary">Compra</button>
-                                        </div>
-                                        <small class="text-muted">R$ 5,00</small>
-                                    </div>
-                                </div>
+                                <small class="text-muted">R$ 50,00</small>
                             </div>
                         </div>
-                        <div class="col-md-4">
-                            <div class="card mb-4 shadow-sm">
-                                <div class="zoom">
-                                    <img class="card-img-top" src="res/images/sem-foto.webp" alt="Card image cap">
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="card mb-4 shadow-sm">
+                        <div class="zoom">
+                            <img class="rounded img-fluid" id="imagemprodutos" src="res/images/sem-foto.webp" alt="Card image cap"></center>
+                        </div>
+                        <div class="card-body">
+                            <p class="card-text">Produto</p>
+                            <div class="d-flex justify-content-between align-items-center">
+                                <div class="btn-group">
+                                    <button type="button" class="btn btn-sm btn-outline-secondary">Compra</button>
                                 </div>
-                                <div class="card-body">
-                                    <p class="card-text">Produto</p>
-                                    <div class="d-flex justify-content-between align-items-center">
-                                        <div class="btn-group">
-                                            <button type="button" class="btn btn-sm btn-outline-secondary">Compra</button>
-                                        </div>
-                                        <small class="text-muted">R$ 50,00</small>
-                                    </div>
-                                </div>
+                                <small class="text-muted">R$ 30,00</small>
                             </div>
                         </div>
-                        <div class="col-md-4">
-                            <div class="card mb-4 shadow-sm">
-                                <div class="zoom">
-                                    <img class="rounded img-fluid" id="imagemprodutos" src="res/images/sem-foto.webp" alt="Card image cap"></center>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="card mb-4 shadow-sm">
+                        <div class="zoom">
+                            <img class="rounded img-fluid" id="imagemprodutos" src="res/images/sem-foto.webp" alt="Card image cap"></center>
+                        </div>
+                        <div class="card-body">
+                            <p class="card-text">Produto</p>
+                            <div class="d-flex justify-content-between align-items-center">
+                                <div class="btn-group">
+                                    <button type="button" class="btn btn-sm btn-outline-secondary">Compra</button>
                                 </div>
-                                <div class="card-body">
-                                    <p class="card-text">Produto</p>
-                                    <div class="d-flex justify-content-between align-items-center">
-                                        <div class="btn-group">
-                                            <button type="button" class="btn btn-sm btn-outline-secondary">Compra</button>
-                                        </div>
-                                        <small class="text-muted">R$ 30,00</small>
-                                    </div>
-                                </div>
+                                <small class="text-muted">R$ 30,00</small>
                             </div>
                         </div>
-                        <div class="col-md-4">
-                            <div class="card mb-4 shadow-sm">
-                                <div class="zoom">
-                                    <img class="rounded img-fluid" id="imagemprodutos" src="res/images/sem-foto.webp" alt="Card image cap"></center>
-                                </div>
-                                <div class="card-body">
-                                    <p class="card-text">Produto</p>
-                                    <div class="d-flex justify-content-between align-items-center">
-                                        <div class="btn-group">
-                                            <button type="button" class="btn btn-sm btn-outline-secondary">Compra</button>
-                                        </div>
-                                        <small class="text-muted">R$ 30,00</small>
-                                    </div>
-                                </div>
-                            </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="card mb-4 shadow-sm">
+                        <div class="zoom">
+                            <img class="rounded img-fluid" id="imagemprodutos" src="res/images/sem-foto.webp" alt="Card image cap"></center>
                         </div>
-                        <div class="col-md-4">
-                            <div class="card mb-4 shadow-sm">
-                                <div class="zoom">
-                                    <img class="rounded img-fluid" id="imagemprodutos" src="res/images/sem-foto.webp" alt="Card image cap"></center>
+                        <div class="card-body">
+                            <p class="card-text">Produto</p>
+                            <div class="d-flex justify-content-between align-items-center">
+                                <div class="btn-group">
+                                    <button type="button" class="btn btn-sm btn-outline-secondary">Compra</button>
                                 </div>
-                                <div class="card-body">
-                                    <p class="card-text">Produto</p>
-                                    <div class="d-flex justify-content-between align-items-center">
-                                        <div class="btn-group">
-                                            <button type="button" class="btn btn-sm btn-outline-secondary">Compra</button>
-                                        </div>
-                                        <small class="text-muted">R$ 30,00</small>
-                                    </div>
-                                </div>
+                                <small class="text-muted">R$ 30,00</small>
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
-            </main>
-            <jsp:include page="rodape.jsp" />
-            </body>
-            </html>
+        </div>
+    </div>
+</main>
+<script src="res/js/scripts.js"></script>
+<jsp:include page="rodape.jsp" />
+</body>
+</html>

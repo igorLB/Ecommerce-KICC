@@ -1,4 +1,4 @@
-    #btnvendas:hover,#btncontrole:hover,
+#btnvendas:hover,#btncontrole:hover,
 #btntrocas:hover,#btndados:hover,#btncompras:hover{color:white;}
 
 #btnvendas,#btncompras,#btncontrole,#btntrocas,#btndados{color:#000000;font-size:13px;}

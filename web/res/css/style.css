@@ -225,3 +225,15 @@ body {
 #powered a:hover{
 	color:#292929;
 }
+
+
+.titulo-primario{
+    font-size: 16pt;
+    color: black;
+    font-weight: bold;
+}
+
+.titulo-secundario{
+    font-size: 14pt;
+    color: black;
+}
