@@ -1,6 +1,4 @@
-    body{
-            background-color:;
-        }
+
      
     .titulo-produto{ 
     width:84%; 
@@ -39,7 +37,7 @@
         }
 .btn_Incio_grupo {
             width: 300px;
-            margin-left:;
+            
         } 
   .espaco{height:260px;}      
  /*    
@@ -56,7 +54,7 @@
     .imagem-produto{margin-left:-5px; }
     #carregarimagem{ }
     .titulo-produto{width:340px;}
-    .image-outras{width:340px;}]
+    .image-outras{width:340px;}
 	#produtosimilares{ overflow-x: auto; width:800px; border:1px solid red; float:left;}
 	#img-4{float:left;}
 	#img-3{float:left;}
@@ -101,7 +99,6 @@
         }
      #btn-acessorio{ 
          float:right;
-         margin-left:;
          margin-top:-48px;
         }
     }
@@ -121,11 +118,9 @@
       #btn-console{ 
          float:right;
          margin-right:340px;
-         margin-top:;
         }
      #btn-acessorio{ 
          float:right;
-         margin-left:;
          margin-top:-48px;
         }
 }

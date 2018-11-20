@@ -3,38 +3,8 @@
 <%@page import="java.util.ArrayList"%>
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
 <jsp:include page="cabecalho.jsp" />
-<script type="text/javascript">
-    var REST_URL = "http://localhost:11233/ProjetoKiccWebService/webresources/produtos";
-    $(document).ready(function () {
-        
-        $.ajax({
-            type: "GET",
-            url: REST_URL,
- 
-            success: function (data) {
-                
-                for (i in data) {
 
-                    var nome = data[i].nome;
-                    var preco = data[i].preco;
-                    var imagem1 = data[i].imagem1;
-                    var imagem2 = data[i].imagem2;
-                    var imagem3 = data[i].imagem3;
-                 
-                }
-                
-                $("#nome").html(nome);
-                $("#preco").html(preco);
-                $('#imagem1').append('<img src="'+imagem1+'">');
-                $('#imagem2').append('<img src="'+imagem2+'">');
-                $('#imagem3').append('<img src="'+imagem3+'">');
 
-            }
-        });
-        return (false);
-
-    });
-</script>
 <div class="container">
     <div class="col-sm-14 mr-auto ml-auto" align="" > 
         <nav class="navbar navbar-expand-lg navbar-light">
@@ -100,71 +70,23 @@
             <p class="lead text-muted">Departamento de Alimentos e Bebidas com as melhores Ofertas e Promoções nas loja KICC.com. Compra segura, preço baixo e entrega rápida!</p>
             <hr>
             </section>
-			<div class="album py-5 bg-light">
-				 <div class="container">
+            <div class="album py-5 bg-light">
+                <div class="container">
                     <div class="pricing-header px-3 py-3 pt-md-5 pb-md-4 mx-auto text-center">
                         <h1 class="display-4 text-dark">Produtos Populares</h1>
-						<div class="row">
-                        <div class="col-md-4">
-                            <div class="card mb-4 shadow-sm">
-                                <div class="zoom">
-                                    <!-- <img class="card-img-top" src="res/images/sem-foto.webp" alt="Popular 01"> -->
-                                    <div id="imagem1" class="card mb-4 shadow-sm"></div>
-                                </div>
-                                <div class="card-body">
-                                    <p class="card-text"><div id="nome"></div></p>
-                                    <div class="d-flex justify-content-between align-items-center">
-                                        <div class="btn-group">
-                                            <button type="button" class="btn btn-sm btn-outline-secondary">Compra</button>
-                                        </div>
-                                        <small class="text-muted"><div id="preco"></div></small>
-                                    </div>
-                                </div>
-                            </div>
+                        <div class="row" id="product-list">
+
+                            <!-- PRODUTOS VAO SER LISTADOS AQUI VIA JQUERY -->
+                            
                         </div>
-						<div class="col-md-4">
-                            <div class="card mb-4 shadow-sm">
-                                <div class="zoom">
-                                    <!-- <img class="card-img-top" src="res/images/sem-foto.webp" alt="Popular 02"> -->
-                                    <div id="imagem2" class="card mb-4 shadow-sm"></div>
-                                </div>
-                                <div class="card-body">
-                                    <p class="card-text"><div id="nome"></div></p>
-                                    <div class="d-flex justify-content-between align-items-center">
-                                        <div class="btn-group">
-                                            <button type="button" class="btn btn-sm btn-outline-secondary">Compra</button>
-                                        </div>
-                                        <small class="text-muted"><div id="preco"></div></small>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-						<div class="col-md-4">
-                            <div class="card mb-4 shadow-sm">
-                                <div class="zoom">
-                                    <!-- <img class="card-img-top" src="res/images/sem-foto.webp" alt="Popular 03"> -->
-                                    <div id="imagem3" class="card mb-4 shadow-sm"></div>
-                                </div>
-                                <div class="card-body">
-                                    <p class="card-text"><div id="nome"></div></p>
-                                    <div class="d-flex justify-content-between align-items-center">
-                                        <div class="btn-group">
-                                            <button type="button" class="btn btn-sm btn-outline-secondary">Compra</button>
-                                        </div>
-                                        <small class="text-muted"><div id="preco"></div></small>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-				</div>	
-			</div>
-			</div>
+                    </div>	
+                </div>
+            </div>
             <!-- Produtos -->
             <%
                 //ArrayList<Produto> listaPop = ProdutoDAO.getProdutosPopulares();
-            %>
-			
+%>
+
             <div class="album py-5 bg-light">
                 <div class="container">
                     <div class="pricing-header px-3 py-3 pt-md-5 pb-md-4 mx-auto text-center">
