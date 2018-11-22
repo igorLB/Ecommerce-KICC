@@ -4,7 +4,7 @@
 <html lang="">
     <head>
         <meta charset="utf-8">
-        <noscript><meta http-equiv="refresh" content="1; url=http://changegames.ga/htaccess/errojavascript.html"></noscript>
+        <noscript><meta http-equiv="refresh" content="1" ></noscript>
         <!--<link rel="icon" href="corpo/logo3.png" type="image/png" sizes="16x16">-->
         <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
         <script
@@ -32,7 +32,7 @@
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
         </button>
-        <a class="navbar-brand" href="#">
+        <a class="navbar-brand" href="index.jsp">
             <img src="res/bootstrap-solid.svg" width="30" height="30" class="d-inline-block align-top" alt="">
             KICC
         </a>
