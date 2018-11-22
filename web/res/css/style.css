@@ -228,7 +228,7 @@ body {
 
 
 .titulo-primario{
-    font-size: 16pt;
+    font-size: 18pt;
     color: black;
     font-weight: bold;
 }
@@ -236,4 +236,5 @@ body {
 .titulo-secundario{
     font-size: 14pt;
     color: black;
+    margin-bottom: 5px;
 }
