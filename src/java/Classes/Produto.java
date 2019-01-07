@@ -7,7 +7,7 @@ import java.sql.Date;
  * @author igorc, Cristiano
  */
 
-public class Produto extends Utilitarios{
+public class Produto{
 
     private Date dataValidade;
     private float preco, preco_promocional, peso;

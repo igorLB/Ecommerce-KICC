@@ -19,6 +19,8 @@
                     <h5 class="card-title padding5" id="produto-nome">Nome Produto</h5>      
                     <strong id="produto-quantidade" class="padding5">quantidade</strong>
                     <p id="produto-marca" class="padding5">marca</p>
+                    
+                    <p id="produto-validade" class="padding5">validade</p>
                     <div>
                         <p id="produto-preco" class="padding5">preço<p>
                     </div>
@@ -26,13 +28,10 @@
                         
                         <div class="text-center">
 
-                            <strong>Calcular Frete</strong>
-                            <input class="form-control" id="cep_destino" type="text" placeholder="Digite seu CEP">
-                            <div id="valortotal"></div>
+                            
 
                             <div class="text-center">
-                                <button id="calcularfrete" class="btn btn-secondary btn-lg">Calcular frete</button>
-                                <input type="submit" class="btn btn-primary btn-lg" name="acao" value="Carrinho">
+                                <a href="carrinho_compra.jsp" class="btn btn-primary btn-lg" name="acao" value="Adicionar ao Carrinho">Adicionar ao Carrinho</a>
                             </div>
                         </div>
                     </div>

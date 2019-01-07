@@ -1,51 +1,86 @@
-<div style="background-color: #141418;">
-    <style>#hidden1{border-right: solid silver 1px;}
-        #hidden2{border-left: solid silver 1px;}
-        @media only screen and (max-width: 600px) { #hidden1{border-style: none;} #hidden2{border-style: none;} }</style>
-    <br>
-    <div class="row w-100 text-center">
-        <div id="hidden1" class="col-md-4" >
-            <p>
-                <a href="contato.jsp">Fale conosco</a>
-            </p>
-            <p>
-                <a href="">Quem Somos</a>
-            </p>
-            <p>
-                <a href="">Políticas de Privacidade</a>
-            </p>
+<!-- Footer -->
+<footer class="page-footer font-small pt-4">
+
+    <!-- Footer Links -->
+    <div class="container-fluid text-center text-md-left">
+
+      <!-- Grid row -->
+      <div class="row">
+
+        <!-- Grid column -->
+        <div class="col-md-6 mt-md-0 mt-3 footer-text">
+
+          <!-- Content -->
+          <h5 class="text-uppercase">Aqui vendemos tudo o que sua cozinha precisa</h5>
+          <p>Venha aqui fazer parte da maior comunidade alimenticia do Brasil, aqui é o nosso forte é te servir bem!</p>
+
         </div>
-        <div class="col-md-4">
-            <p>
-                <a href="#">Pagamentos</a>
-            <p>
-                <a href="#">Devoluções</a>
-            </p>
-            <p>
-                <a href="#">Dúvidas Frequentes</a>
-            </p>
-            </p>
-        </div>
-        <div id="hidden2"  class="col-md-4">
-            <p>
-                <!--<img width="80px;" src="res/images-site/mercadoPago.png">-->
-                <!--<img width="80px;" src="res/images-site/ssl.png">-->
-            <p>
-        </div>
+        <!-- Grid column -->
+
+        <hr class="clearfix w-100 d-md-none pb-3">
+
+        <!-- Grid column -->
+        <div class="col-md-3 mb-md-0 mb-3">
+
+            <!-- Links -->
+            <h5 class="text-uppercase">Navegue</h5>
+
+            <ul class="list-unstyled">
+              <li>
+                <a href="#!">Frutas</a>
+              </li>
+              <li>
+                <a href="#!">Enlatados</a>
+              </li>
+              <li>
+                <a href="#!">Grãos</a>
+              </li>
+              <li>
+                <a href="#!">Frescos!</a>
+              </li>
+            </ul>
+
+          </div>
+          <!-- Grid column -->
+
+          <!-- Grid column -->
+          <div class="col-md-3 mb-md-0 mb-3">
+
+            <!-- Links -->
+            <h5 class="text-uppercase">Redes Sociais</h5>
+
+            <ul class="list-unstyled">
+              <li>
+                <a href="#!">Facebook</a>
+              </li>
+              <li>
+                <a href="#!">Instagram</a>
+              </li>
+              <li>
+                <a href="#!">Linkedin</a>
+              </li>
+              <li>
+                  <a target="_black" href="http://www.fb.com/igorcedro">Igor Cedro</a>
+              </li>
+            </ul>
+
+          </div>
+          <!-- Grid column -->
+
+      </div>
+      <!-- Grid row -->
+
     </div>
-    <div style="color: silver;" class="row w-100 text-center">
-        <div class="col-md-4">
-            <p>&copy; copyrigh - 2018. KICC</p>
-        </div>
-        <div class="col-md-4">
-            <p>(11) 9999-9999</p>
-        </div>
-        <div class="col-md-4">
-            <style> #link-suport{color:#D8D8D8;}  #link-suport:hover{color:#007bff;}</style>
-            <p><a id="link-suport" href="contato.jsp">contatokicc@outlook.com</a></p>
-        </div>
+    <!-- Footer Links -->
+
+    <!-- Copyright -->
+    <div class="footer-copyright text-center py-3">© 2019 Copyright:
+      <a href="http://localhost:8080/Ecommerce-KICC/"> Mercadinho Kicc</a>
     </div>
-</div>
+    <!-- Copyright -->
+
+  </footer>
+  <!-- Footer -->
 
 <!-- CHAMAR SCRIPTS AQUI -->
 

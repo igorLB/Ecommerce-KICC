@@ -1,0 +1,67 @@
+/*
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+*/
+/* 
+    Created on : 20/11/2018, 10:45:21
+    Author     : igorc
+*/
+
+
+.containter-pesquisa{
+    margin-top:20px;
+}
+#titulo-resultados{
+    margin-bottom: 20px;
+}
+
+/* autocomplete barra de pesquisa*/
+#ui-id-1{
+    background: #FFF;
+    list-style: none;
+    font-weight: bold;
+    border: 1px solid darkblue;
+    border-top: 0px;
+    border-radius: 4px;
+    box-shadow: 3px 3px 5px #646566;
+}
+#ui-id-1 li{
+    padding: 2px;
+    cursor: pointer;
+    font-size: 12pt;
+}
+#ui-id-1 li:hover{
+    background-color: blue;
+    color: white;
+}
+
+        
+/*Menu lateral*/
+.menu-marcas{
+   list-style: none;
+   border: 1px solid darkgrey;
+   border-radius: 4px;
+   padding: 4px;
+   padding-left: 10px;
+   margin-bottom: 10px;
+}
+
+.menu-marcas li:hover{
+    font-weight: bold;
+}
+
+
+/*menu horizontal*/
+.menu-horizontal{
+    display: flex; 
+    justify-content: space-between
+}
+
+/* lista de produtos */
+#resultados{
+    display: flex;
+    justify-content: flex-start;
+    flex-wrap: wrap;
+    
+}

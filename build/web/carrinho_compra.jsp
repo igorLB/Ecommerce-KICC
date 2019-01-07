@@ -11,16 +11,16 @@
 				</tr>
 			<tbody>
 				<tr>
-					<td>Produto</td>
+					<td>Uva</td>
 					<td><input type="text" id="txtquantidade" name="txtquantidade" size="4" onkeypress="limitar(this); return validarcampo(event);"></td>
-					<td>R$: 40,00</td>
-					<td>R$: 40,00</td>
+					<td>R$: 10,00</td>
+					<td>R$: 10,00</td>
 					<td align="center"><a href="#">Remover</a></td>
 				</tr>
 				<tr class="bg-light">
 					<td colspan="2"></td>
 					<td align="right">Total:</td>
-					<td>R$: 40,00</td>
+					<td>R$: 10,00</td>
 					<td colspan="1"></td>
 				</tr>
 			</tbody>	
