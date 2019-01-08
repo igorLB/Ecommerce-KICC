@@ -13,9 +13,11 @@
             crossorigin="anonymous"></script>
         <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
         <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css" integrity="sha384-UHRtZLI+pbxtHCWp1t77Bi1L4ZtiqrqD80Kn4Z8NTSRyMA2Fd33n5dQ8lWUE00s/" crossorigin="anonymous">
         <link rel="stylesheet" type="text/css" href="res/css/pagina_produto.css">
         <link rel="stylesheet" type="text/css" href="res/css/produto.css">
         <link rel="stylesheet" type="text/css" href="res/css/pesquisa.css">
+        <link rel="stylesheet" type="text/css" href="res/css/carrinho_compra.css">
         <link type="text/css" rel="stylesheet" href="res/css/style.css" media="screen" />
         <link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
     </head>

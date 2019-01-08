@@ -57,8 +57,8 @@ $(document).on("click", "ul#marcas input", function () {
                 produto += "                <p>R$ " + dados[i].precoPromocional + "</p>";
                 produto += "            </div>";
                 produto += "            <div class='produto-preco'>     ";
-                produto += "                <button type='button' class='btn btn-sm btn-outline-secondary btn-comprar'>Comprar</button>";
                 produto += "                <p>R$ " + dados[i].precoPromocional + "</p>";
+                produto += "                <button type='button' class='btn btn-sm btn-outline-secondary btn-comprar'>Comprar</button>";
                 produto += "            </div>";
                 produto += "        </div>";
                 produto += "    </div>";
@@ -95,8 +95,8 @@ $(document).on("click", "ul#marcas input", function () {
                         produto += "                <p>R$ " + dados[i].precoPromocional + "</p>";
                         produto += "            </div>";
                         produto += "            <div class='produto-preco'>     ";
-                        produto += "                <button type='button' class='btn btn-sm btn-outline-secondary btn-comprar'>Comprar</button>";
                         produto += "                <p>R$ " + dados[i].precoPromocional + "</p>";
+                        produto += "                <button type='button' class='btn btn-sm btn-outline-secondary btn-comprar'>Comprar</button>";
                         produto += "            </div>";
                         produto += "        </div>";
                         produto += "    </div>";

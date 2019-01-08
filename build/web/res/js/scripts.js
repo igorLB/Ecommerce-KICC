@@ -26,7 +26,6 @@ function getProdutos(){
             
         }
     });
-      
 }
 
 function montaProduto(data){
@@ -37,13 +36,11 @@ function montaProduto(data){
             
             //montando um produto
             var produto = "";
-            produto += "<div id='"+data[i].idProduto+"' class='col-md-3 produto'> ";
+            produto += "<div id='"+data[i].idProduto+"' class='col-md-3 col-sm-6 produto'> ";
             produto += "    <div class='card quadro-produto shadow-sm'>";
-            produto += "        ";
             produto += "            <div class='card mb-4 shadow-sm produto-box-image'>";
             produto += "                <img class='produto-img' src='"+data[i].imagem1+"'> ";
             produto += "            </div>";
-            produto += "        ";
             produto += "        <div class='card-body produto-body'>";
             produto += "            <p class='card-text produto-nome'>";
             produto += "                <span> "+data[i].nome+" </span>";
@@ -63,13 +60,11 @@ function montaProduto(data){
         
             //montando um produto
             var produto = "";
-            produto += "<div id='"+data[i].idProduto+"' class='col-md-3 produto'> ";
+            produto += "<div id='"+data[i].idProduto+"' class='col-md-3 col-sm-6 produto'> ";
             produto += "    <div class='card shadow-sm'>";
-            produto += "        ";
             produto += "            <div class='card mb-4 shadow-sm'>";
             produto += "                <img class='produto-img' src='"+data[i].imagem1+"'> ";
             produto += "            </div>";
-            produto += "        ";
             produto += "        <div class='card-body produto-body'>";
             produto += "            <p class='card-text produto-nome'>";
             produto += "                <span> "+data[i].nome+" </span>";
@@ -78,7 +73,7 @@ function montaProduto(data){
             produto += "                <p class='produto-preco'>R$ "+data[i].precoPromocional+"</p>";
             produto += "                <p class='produto-preco-promo'>R$ "+data[i].preco+"</p>";
             produto += "            </div>";
-            produto += "            <button type='button' class='btn btn-sm btn-outline-secondary btn-comprar'>Comprar</button>";
+            produto += "            <div><button type='button' class='btn btn-sm btn-outline-secondary btn-comprar'>Comprar</button></div>";
             produto += "        </div>";
             produto += "    </div>";
             produto += "</div>";

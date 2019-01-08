@@ -4,7 +4,12 @@ $(function () {
     var parametros = getParametros();
     var id = parametros['produto'];
     carregarProduto(id);
+    
+});
 
+
+$(".outras-imagens img").click(function(){
+    $("#imgproduto1").attr("src", $(this).attr("src")) ;
 });
 
 
@@ -20,14 +25,33 @@ function carregarProduto(id){
         success: function (data) {
             console.log(data);
             if(data.idProduto > 0){
-                $("#produto-nome").text( data.nome );
-                $("#produto-preco").text( "R$"+data.preco );
-                $("#produto-quantidade").text( "Quantidade: "+data.quantidade );
-               
-                $("#produto-validade").text( "Data validade: "+data.dataValidade );
-                $("#produto-marca").text( "Marca: "+data.marca );
-                $("#imgproduto1").attr("src", data.imagem1) ;
                 
+                if(data.precoPromocional == "0"){
+                    $("#produto-nome").text( data.nome );
+                    $("#produto-descricao").text( data.descricao );
+                    $("#produto-preco").text( "R$"+data.preco );
+                    $("#produto-preco-original").hide();
+                    $("#produto-quantidade").text( "Quantidade: "+data.quantidade );               
+                    $("#produto-validade").text( "Data validade: "+data.dataValidade );
+                    $("#produto-marca").text( "Marca: "+data.marca );
+                    $("#imgproduto1").attr("src", data.imagem1) ;
+                    $("#outrasImagens1").attr("src", data.imagem1) ;
+                    $("#outrasImagens2").attr("src", data.imagem2) ;
+                    $("#outrasImagens3").attr("src", data.imagem3) ;
+                }else{
+                    $("#produto-nome").text( data.nome );
+                    $("#produto-descricao").text( data.descricao );
+                    $("#produto-preco-original").text( "R$"+data.preco );
+                    $("#produto-preco").text( "R$"+data.precoPromocional );
+                    $("#produto-quantidade").text( "Quantidade: "+data.quantidade );               
+                    $("#produto-validade").text( "Data validade: "+data.dataValidade );
+                    $("#produto-marca").text( "Marca: "+data.marca );
+                    $("#imgproduto1").attr("src", data.imagem1) ;
+                    $("#outrasImagens1").attr("src", data.imagem1) ;
+                    $("#outrasImagens2").attr("src", data.imagem2) ;
+                    $("#outrasImagens3").attr("src", data.imagem3) ;
+                }
+    
             }else{
                 alert("Produto não econtrado!");
             }

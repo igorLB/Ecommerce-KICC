@@ -62,12 +62,40 @@
     max-height: 500px;
 }
 
-#produto-preco{
-    font-size: 18pt;
-    font-weight: bold;
-    color: blue;
-    margin-bottom: 10px;
+#produto-nome{
+    font-weight: 500;
+    font-size: 36px;
+    margin-bottom: .5rem;
 }
+
+#produto-descricao{
+    color: #51545f;
+    font-size: 14px;
+    font-weight: 500;
+    margin-bottom: 1rem;
+}
+
+#produto-marca, #produto-quantidade, #produto-validade{
+    color: #51545f;
+    font-size: 12px;
+    text-align: center;
+}
+
+#produto-preco-original{
+    color: #b9b4c7;
+    text-decoration: line-through;
+    font-weight: 500;
+    font-size: 14px;
+    margin-top:10px;
+}
+
+#produto-preco{
+    font-size: 24px;
+    color: blue;
+    font-weight: 500;
+}
+
+
 
 .padding5{
     padding: 10px;

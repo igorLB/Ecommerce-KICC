@@ -1,39 +1,33 @@
 <jsp:include page="cabecalho.jsp" />
 
-<div class="container">
+<div class="container container-pagina-produto">
     <div class="row">
-        <div  class="col-sm-7">
-            <div class="imagem-produto">
-                <div class="text-left ">
-                    <div id="carregarimagemsimilares" ></div>
-                    <div class="image-outras">
-                        <input type="image" src="" value="" alt="Submit" name="imgproduto1" id="imgproduto1" class="rounded img-fluid" width="450" height="250">
-                    </div>
-                </div>
+        <div  class="col-md-7 ">
+            <div class="row imagem-produto">
+                <img src="" name="imgproduto1" id="imgproduto1" class="rounded img-fluid">   
+            </div>
+            <div class="row outras-imagens d-flex justify-content-between">
+                <div class="col-md-4"> <img class="" id="outrasImagens1" src="" alt="Imagem produto 1">  </div>
+                <div class="col-md-4"> <img class="" id="outrasImagens2" src="" alt="Imagem produto 2">  </div>
+                <div class="col-md-4"> <img class="" id="outrasImagens3" src="" alt="Imagem produto 3">  </div>
             </div>
         </div>
-        
-        <div  class="col-sm-5">
+
+        <div  class="col-md-5">
             <div id="painel" class="card">
-                <div class="card-body text-center" >
-                    <h5 class="card-title padding5" id="produto-nome">Nome Produto</h5>      
-                    <strong id="produto-quantidade" class="padding5">quantidade</strong>
-                    <p id="produto-marca" class="padding5">marca</p>
-                    
-                    <p id="produto-validade" class="padding5">validade</p>
-                    <div>
-                        <p id="produto-preco" class="padding5">preço<p>
-                    </div>
+                <div class="card-body " >
+
+                    <h2 class="" id="produto-nome">Nome Produto</h2>    
+                    <p id="produto-descricao">Descrição do produto</p>
+                    <p id="produto-quantidade" class="">quantidade</p>
+                    <p id="produto-marca" class="">marca</p>
+                    <p id="produto-validade" class="">validade</p>
+                    <p id="produto-preco-original" class="text-center">preço promo<p>
+                    <p id="produto-preco" class="text-center">preço<p>
+
+
                     <div class="text-center" align="center">                                     
-                        
-                        <div class="text-center">
-
-                            
-
-                            <div class="text-center">
-                                <a href="carrinho_compra.jsp" class="btn btn-primary btn-lg" name="acao" value="Adicionar ao Carrinho">Adicionar ao Carrinho</a>
-                            </div>
-                        </div>
+                        <a href="carrinho_compra.jsp" class="btn btn-primary btn-lg" name="acao" value="Adicionar ao Carrinho"><i class="fas fa-cart-plus"></i>Adicionar ao Carrinho</a>
                     </div>
                 </div>
             </div>
