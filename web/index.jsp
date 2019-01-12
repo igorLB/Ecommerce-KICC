@@ -32,15 +32,17 @@
 
 
 <main role="main">
-    <section class="jumbotron text-center">
+    <!--
+    <section class="jumbotron text-center bg-white">
         <div class="container">
             <h1 class="jumbotron-heading">KICC</h1>
             <p class="lead text-muted">Departamento de Alimentos e Bebidas com as melhores Ofertas e Promoções nas loja KICC.com. Compra segura, preço baixo e entrega rápida!</p>
         <hr>
     </section>
+    -->
     
     <!-- BOX PRODUTOS -->
-    <div class="album py-5 bg-light">
+    <div class="album py-5">
         <div class="container">
             <div class="pricing-header px-3 py-3 pt-md-5 pb-md-4 mx-auto text-center">
                 <h1 class="display-4 text-dark">Produtos Populares</h1>

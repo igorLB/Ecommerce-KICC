@@ -27,6 +27,13 @@ html {
     border: 2px red solid;
 }
 
+.bgPrimario{
+    background-color: #5171A5;
+}
+
+.bgSecundario{
+    background-color: #0A369D;
+}
 
 .page-footer{
     background-color: #343a40;
